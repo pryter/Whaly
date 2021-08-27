@@ -9,6 +9,8 @@ const client = new Discord.Client()
 const conn = new WebSocket("wss://stream.binance.com:9443/ws");
 let listening: {[key: string]: {symbol: string, contextUpdate: Message}} = {}
 let stored: {[symbol: string]: string} = {}
+let delay: {[key: string]: number} = {}
+const interval = 5
 
 function randInt(max: number) {
   return Math.floor(Math.random() * max) + 1;
@@ -55,8 +57,17 @@ conn.onmessage = function(evt) {
       if (data.contextUpdate.deleted){
         delete listening[k]
       }else{
-        data.contextUpdate.edit(new MessageEmbed({title: "Basic Ticker", description: `Watching ${data.symbol.toUpperCase()}`}).addFields({name:"Current", value: addStatus(obj.s, obj.c), inline: true}, {name: "%Chg", value: colorPercent(obj.P), inline: true}).setFooter(`Ticker id: ${k}`))
-        stored[obj.s] = obj.c
+
+        if (delay[k] === 0) {
+          data.contextUpdate.edit(new MessageEmbed({title: "Basic Ticker", description: `Watching ${data.symbol.toUpperCase()}`}).addFields({name:"Current", value: addStatus(obj.s, obj.c), inline: true}, {name: "%Chg", value: colorPercent(obj.P), inline: true}).setFooter(`Ticker id: ${k}`))
+          stored[obj.s] = obj.c
+        }
+
+        delay[k] += 1
+
+        if(delay[k] >= interval) {
+          delay[k] = 0
+        }
       }
     }
   }
@@ -88,6 +99,7 @@ client.on("message", async (mess) => {
         symbol: symbol,
         contextUpdate: initMess
       }
+      delay[`${symbol.toUpperCase()}@${mess.channel.id}`] = 0
       Object.keys(listening).length > 0 && conn.send(JSON.stringify({ method: "SUBSCRIBE", params: Object.values(listening).map((val) => `${val.symbol}@ticker`), id:1}));
     }
   }

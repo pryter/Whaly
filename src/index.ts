@@ -10,7 +10,7 @@ const conn = new WebSocket("wss://stream.binance.com:9443/ws");
 let listening: {[key: string]: {symbol: string, contextUpdate: Message}} = {}
 let stored: {[symbol: string]: string} = {}
 let delay: {[key: string]: number} = {}
-const interval = 5
+const interval = process.env.INTERVAL || 5
 
 function randInt(max: number) {
   return Math.floor(Math.random() * max) + 1;

@@ -1,17 +1,18 @@
-# Whaly
-A lonely ginger cat.
+<center><h1>Whaly</h1></center>
+<center>A lonely ginger cat.</center>
 
+<h2>🔥 Current status</h2>
 Whaly is going to be free discord music bot soon.
 
-<h2>Description</h2>
-Node v16.17
-Discord.js v14
-erela.js v2.4
+<h2>🚦 Description</h2>
+Node v16.17<br/>
+Discord.js v14<br/>
+erela.js v2.4<br/>
 Lavalink Server
 
-<h2>Credits things</h2>
-Inspired by: https://github.com/SudhanPlayz/Discord-MusicBot
+<h2>🎨 Credits things</h2>
+Inspired by: https://github.com/SudhanPlayz/Discord-MusicBot <br/>
 *Their bot is also awesome ! Don't foget to check them out.*
 
-
-Crafted with love :)
+<br/>
+Crafted with love 😻

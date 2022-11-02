@@ -1,0 +1,16 @@
+import { Client, REST, Routes } from "discord.js"
+import dotenv from "dotenv"
+import { getAllCommandData } from "@main/commands"
+import { err, info } from "@utils/logger"
+
+dotenv.config()
+
+export const commandDeploy = async () => {
+  try {
+    const rest = new REST({ version: "10" }).setToken(process.env.TOKEN || "")
+    await rest.put(Routes.applicationCommands(process.env.CLIENT_ID || ""), { body: getAllCommandData() })
+    info("Successfully deploy slash commands")
+  } catch (e) {
+    err("Failed")
+  }
+}

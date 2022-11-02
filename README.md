@@ -1,10 +1,25 @@
 <h1 align="center">Whaly</h1>
-<p align="center">A lonely ginger cat.</p>
+<p align="center"><img src="./cat-running.gif" width="24px" height="24px"/> A lonely ginger cat.</p>
 
-<h2>🔥 Current status</h2>
+<h2>🔥 Current Status</h2>
+
 Whaly is going to be free discord music bot soon.
 
-<h2>🚦 Description</h2>
+<h2>✨ Planned Features</h2>
+
+- [X] Bot runtime <br/>
+- [X] Basic bot framework<br/>
+- [X] Play command<br/>
+- [ ] Player Controls<br/>
+- [ ] Other utility commands<br/>
+    - Controls (seek, pause, skip, loop, ...)<br/>
+    - Shuffle<br/>
+    - Some filters<br/>
+- [ ] Auto pause<br/>
+- [ ] Global stats web page <br/>
+- [ ] Web Interface <br/>
+
+<h2>🧂 Description</h2>
 Node v16.17<br/>
 Discord.js v14<br/>
 erela.js v2.4<br/>

@@ -5,7 +5,6 @@ import { registerTrackStartEvent } from "@main/events/trackStart"
 import { registerQueueEndEvent } from "@main/events/queueEnd"
 import { registerTrackErrorEvent } from "@main/events/trackError"
 import { registerPlayerMoveEvent } from "@main/events/playerMove"
-
 import dotenv from "dotenv"
 import { buildRuntimeIndex } from "@main/commands"
 

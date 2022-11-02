@@ -15,4 +15,6 @@ Inspired by: https://github.com/SudhanPlayz/Discord-MusicBot <br/>
 *Their bot is also awesome ! Don't foget to check them out.*
 
 <br/>
+<br/>
+<br/>
 Crafted with love 😻

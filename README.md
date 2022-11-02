@@ -29,6 +29,10 @@ Lavalink Server
 <h2>🎨 Credits things</h2>
 Inspired by: https://github.com/SudhanPlayz/Discord-MusicBot <br/>
 *Their bot is also awesome ! Don't foget to check them out.*
+<br/>
+<br/>
+Animated icons by: 
+https://icon-library.com/
 
 <br/>
 <br/>

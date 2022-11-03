@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="add start script">
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="set presence">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/deployCommand.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/deployCommand.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/events/client/readyEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/client/readyEvent.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/trackStart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/trackStart.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +95,7 @@
       <workItem from="1667416092510" duration="325000" />
       <workItem from="1667416419105" duration="1684000" />
       <workItem from="1667444854484" duration="2360000" />
-      <workItem from="1667484870574" duration="4586000" />
+      <workItem from="1667484870574" duration="5894000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -153,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667489064224</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="set presence">
+      <created>1667489474995</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1667489474995</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -198,7 +205,8 @@
     <MESSAGE value="Modify track error message" />
     <MESSAGE value="add build script" />
     <MESSAGE value="add start script" />
-    <option name="LAST_COMMIT_MESSAGE" value="add start script" />
+    <MESSAGE value="set presence" />
+    <option name="LAST_COMMIT_MESSAGE" value="set presence" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

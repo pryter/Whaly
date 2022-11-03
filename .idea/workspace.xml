@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="Implement controlStrips">
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="Modify track error message">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/elements/embeds/trackError.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/embeds/trackError.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +95,7 @@
       <workItem from="1667416092510" duration="325000" />
       <workItem from="1667416419105" duration="1684000" />
       <workItem from="1667444854484" duration="2360000" />
-      <workItem from="1667484870574" duration="3379000" />
+      <workItem from="1667484870574" duration="4078000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -131,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667487887524</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Modify track error message">
+      <created>1667488282139</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1667488282139</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -173,7 +181,8 @@
     <MESSAGE value="Add lavalink service" />
     <MESSAGE value="Restructure client register events" />
     <MESSAGE value="Implement controlStrips" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement controlStrips" />
+    <MESSAGE value="Modify track error message" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modify track error message" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

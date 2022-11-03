@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node ./src/runtime.ts",
+    "build": "echo 'Building fresh bot...' && tsc && tsc-alias",
     "deploy": "ts-node ./src/deployCommand.ts",
     "startService": "java -jar ./service/lavalink/Lavalink.jar"
   },
@@ -13,6 +14,7 @@
     "@types/node": "^18.11.9",
     "prettier": "^2.7.1",
     "ts-node": "^10.9.1",
+    "tsc-alias": "^1.7.0",
     "tsconfig-paths": "^4.1.0",
     "typescript": "^4.8.4"
   },

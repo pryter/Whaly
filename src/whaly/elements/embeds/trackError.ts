@@ -13,6 +13,9 @@ export const trackError = (track: Track | UnresolvedTrack) => {
       value: `${track.requester}`,
       inline: true,
     })
+    .setFooter({
+      text: "Meeow~~ There is something wrong here T.T",
+    })
   track.thumbnail && embed.setThumbnail(track.thumbnail)
   return embed
 }

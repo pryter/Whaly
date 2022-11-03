@@ -10,7 +10,7 @@ Whaly is going to be free discord music bot soon.
 - [X] Bot runtime <br/>
 - [X] Basic bot framework<br/>
 - [X] Play command<br/>
-- [ ] Player controls<br/>
+- [X] Player controls<br/>
 - [ ] Interactive queue display<br/>
 - [ ] Other utility commands<br/>
     - Controls (seek, pause, skip, loop, ...)<br/>

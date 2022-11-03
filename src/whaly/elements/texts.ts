@@ -6,3 +6,5 @@ export const differentChannelError = "You must be in the same voice channel as m
 export const notJoinableError = `I don't have enough permission to join your voice channel!`
 
 export const searchingError = `There was an error while searching`
+export const stoppedPlayer = `**Successfully stopped the player**`
+export const noPlayingSongError = `There is no song playing right now.`

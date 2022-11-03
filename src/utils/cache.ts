@@ -1,4 +1,5 @@
 import {
+  ButtonInteraction,
   Channel,
   Client,
   CommandInteraction,
@@ -17,7 +18,7 @@ export const getChannel = (client: Client, textChannel: string | null): Channel 
 
 export const getUserVoiceChannel = async (
   client: Client,
-  interaction: CommandInteraction
+  interaction: CommandInteraction | ButtonInteraction
 ): Promise<VoiceBasedChannel | null> => {
   const userId = interaction.user.id
   const guild = client.guilds.cache.get(interaction?.guild?.id || "")

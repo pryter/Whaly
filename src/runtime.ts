@@ -11,6 +11,7 @@ import { registerReadyEvent } from "@main/events/client/readyEvent"
 import { registerRawEvent } from "@main/events/client/rawEvent"
 import { registerInteractionCreateEvent } from "@main/events/client/interactionCreateEvent"
 import { config } from "./config"
+import { registerPlayerDestroyEvent } from "@main/events/manager/playerDestroy"
 
 dotenv.config()
 
@@ -28,6 +29,7 @@ const runtime = () => {
   registerQueueEndEvent(manager, client)
   registerTrackErrorEvent(manager, client)
   registerPlayerMoveEvent(manager, client)
+  registerPlayerDestroyEvent(manager, client)
 
   // Register client events
   registerReadyEvent(client, manager)

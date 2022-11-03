@@ -4,7 +4,7 @@ import { getChannel } from "@utils/cache"
 import { sendSelfDestroyMessage } from "@utils/message"
 import { disconnectEmbed } from "@main/elements/embeds/discconect"
 import { unexpectedDisconnectReason } from "@main/elements/texts"
-import { config } from "../../config"
+import { config } from "../../../config"
 
 export const registerPlayerMoveEvent = (manager: Manager, client: Client) => {
   manager.on("playerMove", async (player, initChannel, newChannel) => {

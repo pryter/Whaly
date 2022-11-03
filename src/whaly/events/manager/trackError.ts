@@ -4,7 +4,7 @@ import { sendSelfDestroyMessage } from "@utils/message"
 import { Client, TextChannel } from "discord.js"
 import { getChannel } from "@utils/cache"
 import { trackError } from "@main/elements/embeds/trackError"
-import { config } from "../../config"
+import { config } from "../../../config"
 
 export const registerTrackErrorEvent = (manager: Manager, client: Client) => {
   manager.on("trackError", async (player, track, error) => {

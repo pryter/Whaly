@@ -9,8 +9,8 @@ export const commandDeploy = async () => {
   try {
     const rest = new REST({ version: "10" }).setToken(process.env.TOKEN || "")
     await rest.put(Routes.applicationCommands(process.env.CLIENT_ID || ""), { body: getAllCommandData() })
-    info("Successfully deploy slash commands")
+    info("service | Successfully deploy slash commands")
   } catch (e) {
-    err("Failed")
+    err("service | Unable to deploy slash commands")
   }
 }

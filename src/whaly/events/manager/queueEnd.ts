@@ -4,7 +4,7 @@ import { sendSelfDestroyMessage } from "@utils/message"
 import { getChannel } from "@utils/cache"
 import { queueEndEmbed } from "@main/elements/embeds/queueEnd"
 import { disconnectEmbed } from "@main/elements/embeds/discconect"
-import { config } from "../../config"
+import { config } from "../../../config"
 import { inactivityDisconnectReason } from "@main/elements/texts"
 
 export const registerQueueEndEvent = (manager: Manager, client: Client) => {

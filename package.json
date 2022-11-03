@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "ts-node ./src/runtime.ts",
     "build": "echo 'Building fresh bot...' && tsc && tsc-alias",
+    "start": "node ./dist/runtime.js",
     "deploy": "ts-node ./src/deployCommand.ts",
     "startService": "java -jar ./service/lavalink/Lavalink.jar"
   },

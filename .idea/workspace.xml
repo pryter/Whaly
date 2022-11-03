@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="add build script">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="add start script">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/deployCommand.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/deployCommand.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/events/client/readyEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/client/readyEvent.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +45,7 @@
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/Users/peter/Documents/Projects/Whaly/node_modules/prettier",
     "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "/Users/peter/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/222.4345.14/IntelliJ IDEA.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external"
+    "ts.external.directory.path": "/Users/peter/Documents/Projects/Whaly/node_modules/typescript/lib"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -96,7 +95,7 @@
       <workItem from="1667416092510" duration="325000" />
       <workItem from="1667416419105" duration="1684000" />
       <workItem from="1667444854484" duration="2360000" />
-      <workItem from="1667484870574" duration="4178000" />
+      <workItem from="1667484870574" duration="4586000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -147,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667488980132</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add start script">
+      <created>1667489064224</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1667489064224</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -191,7 +197,8 @@
     <MESSAGE value="Implement controlStrips" />
     <MESSAGE value="Modify track error message" />
     <MESSAGE value="add build script" />
-    <option name="LAST_COMMIT_MESSAGE" value="add build script" />
+    <MESSAGE value="add start script" />
+    <option name="LAST_COMMIT_MESSAGE" value="add start script" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

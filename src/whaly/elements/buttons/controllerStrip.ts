@@ -1,4 +1,4 @@
-import { ActionRowBuilder, ButtonBuilder, Guild } from "discord.js"
+import { ActionRowBuilder, ButtonBuilder } from "discord.js"
 import { Player } from "erela.js"
 
 export const controllerStrip = (player: Player): ActionRowBuilder => {

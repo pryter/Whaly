@@ -1,4 +1,4 @@
-import { CommandInteraction, Interaction } from "discord.js"
+import { CommandInteraction } from "discord.js"
 import { Manager } from "erela.js"
 
 export type Runtime = (manager: Manager, interaction: CommandInteraction) => Promise<any>

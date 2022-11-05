@@ -1,5 +1,6 @@
 export const inactivityDisconnectReason = `Whaly has been disconnected due to inactivity.`
 export const unexpectedDisconnectReason = "Whaly has been disconnected for unexpected reason"
+export const forcedDisconnectReason = "Someone disconnected Whaly from the channel :/"
 
 export const notInVoiceChannelError = `You must be in a voice channel to use this command!`
 export const differentChannelError = "You must be in the same voice channel as me to use this command!"

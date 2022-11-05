@@ -1,11 +1,8 @@
-import { EmbedBuilder, SlashCommandBuilder, TextChannel, VoiceChannel } from "discord.js"
+import { EmbedBuilder, Message, SlashCommandBuilder, TextChannel, VoiceChannel } from "discord.js"
 import { Command } from "@itypes/command/Command"
 import { createPlayer } from "@main/player/createPlayer"
 import { getUserVoiceChannel } from "@utils/cache"
 import { err, warn } from "@utils/logger"
-import { SearchResult } from "erela.js"
-import prettyMilliseconds from "pretty-ms"
-import { runningCat } from "@main/elements/icons/runningCat"
 import { addedToQueueEmbed } from "@main/elements/embeds/addedToQueue"
 import { commandErrorEmbed } from "@main/elements/embeds/commandError"
 import { searchingError } from "@main/elements/texts"
@@ -32,6 +29,19 @@ export const playCommand = (): Command => {
 
       if (player.state !== "CONNECTED") {
         player.connect()
+      }
+
+      // If got forced disconnected
+      if (player.get("reconnectMessage")) {
+        player.destroy()
+        const reconnectMess: Message | null = player.get("reconnectMessage")
+        try {
+          reconnectMess?.delete()
+        } catch (_) {
+          err(`whaly | can't delete reconnect message`)
+        }
+        player.set("reconnectMessage", null)
+        return playCommand().runtime(manager, interaction)
       }
 
       const reply = await interaction.reply({

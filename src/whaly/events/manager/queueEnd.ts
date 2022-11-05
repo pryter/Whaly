@@ -8,11 +8,21 @@ import { config } from "../../../config"
 import { inactivityDisconnectReason } from "@main/elements/texts"
 
 export const registerQueueEndEvent = (manager: Manager, client: Client) => {
-  manager.on("queueEnd", async (player, track) => {
+  manager.on("queueEnd", async (player) => {
     const textChannel = <TextChannel>getChannel(client, player.textChannel)
+
+    // If got forced disconnected
+    if (!player.queue.previous) {
+      return
+    }
+
     await sendSelfDestroyMessage(textChannel, { embeds: [queueEndEmbed()] }, config.selfDestroyMessageLifeSpan)
 
     setTimeout(async () => {
+      if (player.state === "DESTROYING") {
+        return
+      }
+
       if (!player.playing && player.state !== "DISCONNECTED") {
         await sendSelfDestroyMessage(
           textChannel,

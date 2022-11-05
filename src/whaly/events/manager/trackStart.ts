@@ -1,12 +1,12 @@
 import { Manager } from "erela.js"
 import { nowPlayingEmbed } from "@main/elements/embeds/nowPlaying"
 import { getChannel } from "@utils/cache"
-import { Client, Message, MessageCreateOptions, MessageEditOptions, TextChannel } from "discord.js"
+import { Client, Message, MessageCreateOptions, TextChannel } from "discord.js"
 import { controllerStrip } from "@main/elements/buttons/controllerStrip"
 import { log, warn } from "@utils/logger"
 
 export const registerTrackStartEvent = (manager: Manager, client: Client) => {
-  manager.on("trackStart", async (player, track, payload) => {
+  manager.on("trackStart", async (player, track) => {
     const embed = nowPlayingEmbed(track)
     const textChannel = <TextChannel>getChannel(client, player.textChannel)
     const content: MessageCreateOptions = {

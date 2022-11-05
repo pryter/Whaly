@@ -1,4 +1,4 @@
-import { Client, REST, Routes } from "discord.js"
+import { REST, Routes } from "discord.js"
 import dotenv from "dotenv"
 import { getAllCommandData } from "@main/commands"
 import { err, info } from "@utils/logger"

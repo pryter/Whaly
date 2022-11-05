@@ -1,7 +1,5 @@
 import { Track, UnresolvedTrack } from "erela.js"
 import { EmbedBuilder } from "discord.js"
-import { runningCat } from "@main/elements/icons/runningCat"
-import prettyMilliseconds from "pretty-ms"
 
 export const trackError = (track: Track | UnresolvedTrack) => {
   const embed = new EmbedBuilder()

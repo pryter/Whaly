@@ -4,10 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="set presence">
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="Increase disconnectTime &amp;&amp; fix duplicated now playing embed bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runtime.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/command/Command.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/command/Command.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/cache.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/cache.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/commandDeploy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/commandDeploy.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/logger.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/logger.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/message.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/message.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/commands/play.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/play.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/elements/buttons/controllerStrip.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/buttons/controllerStrip.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/elements/embeds/addedToQueue.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/embeds/addedToQueue.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/elements/embeds/nowPlaying.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/embeds/nowPlaying.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/elements/embeds/playlistAddedToQueue.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/embeds/playlistAddedToQueue.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/elements/embeds/trackError.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/embeds/trackError.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/elements/texts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/texts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/events/client/interactionCreateEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/client/interactionCreateEvent.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/playerDestroy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/playerDestroy.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/queueEnd.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/queueEnd.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/trackStart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/trackStart.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/manager/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/manager/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,19 +54,21 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/peter/Documents/Projects/Whaly/src/whaly/elements/embeds",
+    "last_opened_file_path": "/Users/peter/Documents/Projects/Whaly/src/whaly/events/client/interactions",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/Users/peter/Documents/Projects/Whaly/node_modules/prettier",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "settings.javascript.prettier",
     "ts.external.directory.path": "/Users/peter/Documents/Projects/Whaly/node_modules/typescript/lib"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/whaly/events/client/interactions" />
       <recent name="$PROJECT_DIR$/src/whaly/elements/embeds" />
       <recent name="$PROJECT_DIR$/service" />
       <recent name="$PROJECT_DIR$" />
@@ -95,7 +114,8 @@
       <workItem from="1667416092510" duration="325000" />
       <workItem from="1667416419105" duration="1684000" />
       <workItem from="1667444854484" duration="2360000" />
-      <workItem from="1667484870574" duration="5894000" />
+      <workItem from="1667484870574" duration="6526000" />
+      <workItem from="1667678941719" duration="12637000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -160,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667489474995</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Increase disconnectTime &amp;&amp; fix duplicated now playing embed bug">
+      <created>1667491982835</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1667491982835</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -206,7 +233,8 @@
     <MESSAGE value="add build script" />
     <MESSAGE value="add start script" />
     <MESSAGE value="set presence" />
-    <option name="LAST_COMMIT_MESSAGE" value="set presence" />
+    <MESSAGE value="Increase disconnectTime &amp;&amp; fix duplicated now playing embed bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Increase disconnectTime &amp;&amp; fix duplicated now playing embed bug" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

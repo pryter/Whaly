@@ -1,4 +1,5 @@
 import { LogTypes } from "@itypes/logger/LogTypes"
+import { zeroPad } from "@utils/number"
 
 export const printLog = (text: string, type: LogTypes = "info") => {
   let colourLit = ""
@@ -19,7 +20,12 @@ export const printLog = (text: string, type: LogTypes = "info") => {
       break
   }
 
-  console.log(`${colourLit}${text}${resetLit}`)
+  const time = new Date()
+  const formattedDate = `${zeroPad(time.getHours())}:${zeroPad(time.getMinutes())}:${zeroPad(
+    time.getSeconds()
+  )} ${zeroPad(time.getDate())}/${zeroPad(time.getMonth() + 1)}/${time.getFullYear()}`
+
+  console.log(`${colourLit}${formattedDate} | ${text}${resetLit}`)
 }
 
 export const info = (context: string) => {

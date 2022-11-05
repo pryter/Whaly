@@ -1,4 +1,4 @@
-import { Embed, EmbedBuilder } from "discord.js"
+import { EmbedBuilder } from "discord.js"
 import { runningCat } from "@main/elements/icons/runningCat"
 import { Track } from "erela.js"
 import prettyMilliseconds from "pretty-ms"

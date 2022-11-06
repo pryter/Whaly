@@ -12,7 +12,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@airbnb/node-memwatch": "^2.0.0",
     "@types/node": "^18.11.9",
     "babar": "^0.2.3",
     "cli-progress": "^3.11.2",

@@ -13,7 +13,6 @@ import { config } from "./config"
 import { registerPlayerDestroyEvent } from "@main/events/manager/playerDestroy"
 import { registerPlayerDisconnectEvent } from "@main/events/manager/playerDisconnect"
 import { registerDebugEvent } from "@main/events/client/debugEvent"
-import { memoryDetector } from "@utils/memory"
 
 dotenv.config()
 
@@ -44,5 +43,4 @@ const runtime = () => {
   client.login(process.env.TOKEN)
 }
 
-memoryDetector()
 runtime()

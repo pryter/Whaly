@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="Add debug event">
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="Improve code staability &amp;&amp; memory report">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/runtime.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/message.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/message.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/memory.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +101,7 @@
       <workItem from="1667484870574" duration="6526000" />
       <workItem from="1667678941719" duration="13078000" />
       <workItem from="1667692235944" duration="2024000" />
-      <workItem from="1667721057569" duration="7519000" />
+      <workItem from="1667721057569" duration="8020000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -194,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667727408041</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Improve code staability &amp;&amp; memory report">
+      <created>1667733172674</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1667733172674</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -244,7 +251,8 @@
     <MESSAGE value="Implement Reconnect &amp; Reload previous queue after user forced disconnect &amp;&amp; enhance bot stability &amp;&amp; upgrade logging system" />
     <MESSAGE value="Added skip &amp;&amp; clear commands" />
     <MESSAGE value="Add debug event" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add debug event" />
+    <MESSAGE value="Improve code staability &amp;&amp; memory report" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improve code staability &amp;&amp; memory report" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

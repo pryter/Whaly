@@ -1,4 +1,4 @@
-import { err, info, warn } from "@utils/logger"
+import { err, info, log, warn } from "@utils/logger"
 import { Client } from "discord.js"
 import { createManager } from "@main/manager"
 import { registerTrackStartEvent } from "@main/events/manager/trackStart"
@@ -13,6 +13,7 @@ import { config } from "./config"
 import { registerPlayerDestroyEvent } from "@main/events/manager/playerDestroy"
 import { registerPlayerDisconnectEvent } from "@main/events/manager/playerDisconnect"
 import { registerDebugEvent } from "@main/events/client/debugEvent"
+import { memoryDetector } from "@utils/memory"
 
 dotenv.config()
 
@@ -43,4 +44,5 @@ const runtime = () => {
   client.login(process.env.TOKEN)
 }
 
+memoryDetector()
 runtime()

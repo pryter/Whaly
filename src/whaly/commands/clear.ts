@@ -6,6 +6,7 @@ import { Player } from "erela.js"
 import { clearedNItems, nothingToBeCleared, skipPlayingTrackHint } from "@main/elements/texts"
 import { warn } from "@utils/logger"
 import { config } from "../../config"
+import { sendSelfDestroyReply } from "@utils/message"
 
 const ifSomethingPLaying = (player: Player, embed: EmbedBuilder) => {
   if (player.playing) {
@@ -29,15 +30,9 @@ export const clearCommand = (): Command => {
 
       if (!player) return
       if (!player.queue || player.queue.length === 0) {
-        const reply = await interaction.reply({
+        sendSelfDestroyReply(interaction, {
           embeds: [ifSomethingPLaying(player, commandResponseEmbed(nothingToBeCleared))],
-          fetchReply: true,
         })
-        setTimeout(() => {
-          reply.delete().catch((e) => {
-            warn("whaly | Unable to delete command reply.")
-          })
-        }, config.selfDestroyMessageLifeSpan)
         return
       }
 
@@ -45,15 +40,9 @@ export const clearCommand = (): Command => {
 
       player.queue.clear()
 
-      const reply = await interaction.reply({
+      sendSelfDestroyReply(interaction, {
         embeds: [ifSomethingPLaying(player, commandResponseEmbed(clearedNItems(count)))],
-        fetchReply: true,
       })
-      setTimeout(() => {
-        reply.delete().catch((e) => {
-          warn("whaly | Unable to delete command reply.")
-        })
-      }, config.selfDestroyMessageLifeSpan)
     },
   }
 }

@@ -5,6 +5,7 @@ import { commandResponseEmbed } from "@main/elements/embeds/commandResponse"
 import { clearedNItems, nothingToBeCleared, skipped } from "@main/elements/texts"
 import { config } from "../../config"
 import { warn } from "@utils/logger"
+import { sendSelfDestroyReply } from "@utils/message"
 
 export const skipCommand = (): Command => {
   return {
@@ -24,15 +25,9 @@ export const skipCommand = (): Command => {
       player.queue.previous = player.queue.current
       player.stop()
 
-      const reply = await interaction.reply({
+      sendSelfDestroyReply(interaction, {
         embeds: [commandResponseEmbed(skipped)],
-        fetchReply: true,
       })
-      setTimeout(() => {
-        reply.delete().catch((e) => {
-          warn("whaly | Unable to delete command reply.")
-        })
-      }, config.selfDestroyMessageLifeSpan)
     },
   }
 }

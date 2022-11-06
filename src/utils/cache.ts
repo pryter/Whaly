@@ -1,6 +1,7 @@
 import { ButtonInteraction, Channel, Client, CommandInteraction, VoiceBasedChannel } from "discord.js"
 import { commandErrorEmbed } from "@main/elements/embeds/commandError"
 import { differentChannelError, notInVoiceChannelError, notJoinableError } from "@main/elements/texts"
+import { sendSelfDestroyReply } from "@utils/message"
 
 export const getChannel = (client: Client, textChannel: string | null): Channel | undefined => {
   if (!textChannel) return undefined
@@ -19,19 +20,19 @@ export const getUserVoiceChannel = (
     return null
   }
   if (!member.voice.channel) {
-    interaction.reply({
+    sendSelfDestroyReply(interaction, {
       embeds: [commandErrorEmbed(notInVoiceChannelError)],
     })
     return null
   }
   if (me.voice.channel && member.voice.channel.id !== me.voice.channel.id) {
-    interaction.reply({
+    sendSelfDestroyReply(interaction, {
       embeds: [commandErrorEmbed(differentChannelError)],
     })
     return null
   }
   if (!member.voice.channel.joinable) {
-    interaction.reply({
+    sendSelfDestroyReply(interaction, {
       embeds: [commandErrorEmbed(notJoinableError)],
     })
     return null

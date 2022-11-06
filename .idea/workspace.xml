@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="Implement Reconnect &amp; Reload previous queue after user forced disconnect &amp;&amp; enhance bot stability &amp;&amp; upgrade logging system">
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="Added skip &amp;&amp; clear commands">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/commands/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/elements/texts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/texts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runtime.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/cache.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/cache.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/message.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/message.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/commands/clear.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/clear.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/commands/skip.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/skip.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +102,8 @@
       <workItem from="1667444854484" duration="2360000" />
       <workItem from="1667484870574" duration="6526000" />
       <workItem from="1667678941719" duration="13078000" />
-      <workItem from="1667692235944" duration="1891000" />
+      <workItem from="1667692235944" duration="2024000" />
+      <workItem from="1667721057569" duration="1955000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -178,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667691910630</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added skip &amp;&amp; clear commands">
+      <created>1667694178406</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1667694178406</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -226,7 +237,8 @@
     <MESSAGE value="set presence" />
     <MESSAGE value="Increase disconnectTime &amp;&amp; fix duplicated now playing embed bug" />
     <MESSAGE value="Implement Reconnect &amp; Reload previous queue after user forced disconnect &amp;&amp; enhance bot stability &amp;&amp; upgrade logging system" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Reconnect &amp; Reload previous queue after user forced disconnect &amp;&amp; enhance bot stability &amp;&amp; upgrade logging system" />
+    <MESSAGE value="Added skip &amp;&amp; clear commands" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added skip &amp;&amp; clear commands" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

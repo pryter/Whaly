@@ -1,4 +1,4 @@
-import { info } from "@utils/logger"
+import { err, info, warn } from "@utils/logger"
 import { Client } from "discord.js"
 import { createManager } from "@main/manager"
 import { registerTrackStartEvent } from "@main/events/manager/trackStart"
@@ -12,6 +12,7 @@ import { registerInteractionCreateEvent } from "@main/events/client/interactionC
 import { config } from "./config"
 import { registerPlayerDestroyEvent } from "@main/events/manager/playerDestroy"
 import { registerPlayerDisconnectEvent } from "@main/events/manager/playerDisconnect"
+import { registerDebugEvent } from "@main/events/client/debugEvent"
 
 dotenv.config()
 
@@ -36,6 +37,8 @@ const runtime = () => {
   registerReadyEvent(client, manager)
   registerRawEvent(client, manager)
   registerInteractionCreateEvent(client, manager)
+
+  registerDebugEvent(client)
 
   client.login(process.env.TOKEN)
 }

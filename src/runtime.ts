@@ -13,6 +13,7 @@ import { config } from "./config"
 import { registerPlayerDestroyEvent } from "@main/events/manager/playerDestroy"
 import { registerPlayerDisconnectEvent } from "@main/events/manager/playerDisconnect"
 import { registerDebugEvent } from "@main/events/client/debugEvent"
+import { registerVoiceStateUpdateEvent } from "@main/events/client/voiceStateUpdateEvent"
 
 dotenv.config()
 
@@ -37,6 +38,7 @@ const runtime = () => {
   registerReadyEvent(client, manager)
   registerRawEvent(client, manager)
   registerInteractionCreateEvent(client, manager)
+  registerVoiceStateUpdateEvent(client, manager)
 
   registerDebugEvent(client)
 

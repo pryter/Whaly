@@ -17,7 +17,7 @@ Whaly is going to be free discord music bot soon.
     - Controls (seek, pause, skip, loop, ...)<br/>
     - Shuffle<br/>
     - Some filters<br/>
-- [ ] Auto pause<br/>
+- [X] Auto pause<br/>
 - [ ] Global stats web page <br/>
 - [ ] Web Interface <br/>
 

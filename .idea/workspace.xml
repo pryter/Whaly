@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="Fix queue delete error">
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="Fix queue update bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/trackStart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/trackStart.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runtime.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/elements/texts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/texts.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +39,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/peter/Documents/Projects/Whaly/src/whaly/commands",
+    "last_opened_file_path": "/Users/peter/Documents/Projects/Whaly/src/whaly/elements/embeds",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -50,10 +53,10 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/whaly/elements/embeds" />
       <recent name="$PROJECT_DIR$/src/whaly/commands" />
       <recent name="$PROJECT_DIR$/src/whaly/events/manager" />
       <recent name="$PROJECT_DIR$/src/whaly/events/client/interactions" />
-      <recent name="$PROJECT_DIR$/src/whaly/elements/embeds" />
       <recent name="$PROJECT_DIR$/service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -102,7 +105,7 @@
       <workItem from="1667692235944" duration="2024000" />
       <workItem from="1667721057569" duration="8879000" />
       <workItem from="1667840183792" duration="488000" />
-      <workItem from="1667908996697" duration="9992000" />
+      <workItem from="1667908996697" duration="12764000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -237,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667918306855</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Fix queue update bug">
+      <created>1667919426726</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1667919426726</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -293,7 +303,8 @@
     <MESSAGE value="Implement interactive queue system &amp;&amp; fix command responses" />
     <MESSAGE value="Update README.md" />
     <MESSAGE value="Fix queue delete error" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix queue delete error" />
+    <MESSAGE value="Fix queue update bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix queue update bug" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

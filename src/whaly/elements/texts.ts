@@ -17,3 +17,4 @@ export const skipped = "Skipped current track!"
 
 export const queueGenerated = "Here is your current queue :)"
 export const checkNowPlaying = "There is only one song and I'm playing it :/"
+export const pauseTimeout = "It's too lonely to be alone."

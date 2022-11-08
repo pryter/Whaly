@@ -9,6 +9,7 @@ Whaly is going to be free discord music bot soon.<br/>
 
 <h2>✨ Planned Features</h2>
 <img style="vertical-align:middle" src="https://progress-bar.dev/85/?scale=100&title=&nbsp;Progress&width=120&color=babaca"/>
+
 - [X] Bot runtime <br/>
 - [X] Basic bot framework<br/>
 - [X] Play command<br/>

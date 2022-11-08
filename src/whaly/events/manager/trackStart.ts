@@ -20,6 +20,8 @@ export const registerTrackStartEvent = (manager: Manager, client: Client) => {
 
     const nowPlaying: Message | null | undefined = player.get("nowPlaying")
 
+    refreshQueueMessage(player, manager)
+
     if (nowPlaying) {
       nowPlaying.edit(content)
       return
@@ -27,6 +29,5 @@ export const registerTrackStartEvent = (manager: Manager, client: Client) => {
 
     const nowPlayingMessage = await textChannel.send(content).catch(warn)
     player.set("nowPlaying", nowPlayingMessage)
-    refreshQueueMessage(player, manager)
   })
 }

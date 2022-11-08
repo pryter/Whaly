@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="Implement auto pause">
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="Set status every 1 hour">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/whaly/events/client/readyEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/client/readyEvent.ts" afterDir="false" />
     </list>
@@ -102,7 +102,7 @@
       <workItem from="1667692235944" duration="2024000" />
       <workItem from="1667721057569" duration="8879000" />
       <workItem from="1667840183792" duration="488000" />
-      <workItem from="1667908996697" duration="12976000" />
+      <workItem from="1667908996697" duration="13177000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -251,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667922204510</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Set status every 1 hour">
+      <created>1667922422583</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1667922422583</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -309,7 +316,8 @@
     <MESSAGE value="Fix queue delete error" />
     <MESSAGE value="Fix queue update bug" />
     <MESSAGE value="Implement auto pause" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement auto pause" />
+    <MESSAGE value="Set status every 1 hour" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set status every 1 hour" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

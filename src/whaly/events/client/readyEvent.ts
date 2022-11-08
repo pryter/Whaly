@@ -5,7 +5,7 @@ import { Manager } from "erela.js"
 export const registerReadyEvent = (client: Client, manager: Manager) => {
   client.on("ready", () => {
     manager.init(process.env.CLIENT_ID)
-    setInterval(() => {
+    const updatePresence = () => {
       client.user?.setPresence({
         status: "online",
         activities: [
@@ -15,6 +15,10 @@ export const registerReadyEvent = (client: Client, manager: Manager) => {
           },
         ],
       })
+    }
+    updatePresence()
+    setInterval(() => {
+      updatePresence()
     }, 60 * 60 * 1000)
 
     info("client | Successfully logged in")

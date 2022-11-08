@@ -36,11 +36,9 @@ export const playCommand = (): Command => {
       if (player.get("reconnectMessage")) {
         player.destroy()
         const reconnectMess: Message | null = player.get("reconnectMessage")
-        try {
-          reconnectMess?.delete()
-        } catch (_) {
-          err(`whaly | can't delete reconnect message`)
-        }
+        reconnectMess?.delete().catch((_) => {
+          warn(`whaly | can't delete reconnect message`)
+        })
         player.set("reconnectMessage", null)
         return playCommand().runtime(manager, interaction)
       }

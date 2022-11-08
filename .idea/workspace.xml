@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="Set status every 1 hour">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/events/client/readyEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/client/readyEvent.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/commands/play.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/play.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/elements/message/queue.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/message/queue.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/playerDestroy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/playerDestroy.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/playerDisconnect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/playerDisconnect.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,23 +35,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/peter/Documents/Projects/Whaly/src/whaly/elements/embeds",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/peter/Documents/Projects/Whaly/node_modules/prettier",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "/Users/peter/Documents/Projects/Whaly/node_modules/typescript/lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/peter/Documents/Projects/Whaly/src/whaly/elements/embeds&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/peter/Documents/Projects/Whaly/node_modules/prettier&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/peter/Documents/Projects/Whaly/node_modules/typescript/lib&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/whaly/elements/embeds" />
@@ -102,7 +106,8 @@
       <workItem from="1667692235944" duration="2024000" />
       <workItem from="1667721057569" duration="8879000" />
       <workItem from="1667840183792" duration="488000" />
-      <workItem from="1667908996697" duration="13177000" />
+      <workItem from="1667908996697" duration="13223000" />
+      <workItem from="1667922760123" duration="1817000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -258,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667922422583</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Set status every 1 hour">
+      <created>1667922607756</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1667922607756</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">

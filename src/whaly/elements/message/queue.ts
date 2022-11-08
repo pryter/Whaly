@@ -4,6 +4,7 @@ import { queueEmbed } from "@main/elements/embeds/queue"
 import { queueControllerStrip } from "@main/elements/buttons/queueControllerStrip"
 import { sendSelfDestroyMessage } from "@utils/message"
 import { config } from "../../../config"
+import { warn } from "@utils/logger"
 
 const createCollector = (manager: Manager, channel: TextChannel) => {
   const collector: InteractionCollector<any> = channel.createMessageComponentCollector({
@@ -40,10 +41,18 @@ export const generateQueueMessage = async (player: Player, textChannel: TextChan
   if (prevQueueMessage) {
     const message = prevQueueMessage
     const page: number = player.get("queuePage") || 1
-    await message.edit({
-      embeds: [queueEmbed(player, page)], //@ts-ignore
-      components: [queueControllerStrip(player)],
-    })
+    await message
+      .edit({
+        embeds: [queueEmbed(player, page)], //@ts-ignore
+        components: [queueControllerStrip(player)],
+      })
+      .catch((_) => {
+        warn("whaly | Unable to update queue message; Queue embed is missing.")
+        player.set("queueMessage", null)
+        player.set("queuePage", 1)
+        player.set("maxQueuePage", 1)
+        return null
+      })
 
     return
   }
@@ -77,9 +86,7 @@ export const refreshQueueMessage = (player: Player, manager: Manager) => {
   if (queueMessage) {
     if (player.queue.size === 0) {
       queueMessage.delete().catch((e) => {
-        player.set("queueMessage", null)
-        player.set("queuePage", 1)
-        player.set("maxQueuePage", 1)
+        warn("whaly | Unable to clear queue message")
         return null
       })
       player.set("queueMessage", null)

@@ -1,5 +1,5 @@
 import { Manager } from "erela.js"
-import { Client, MessageCreateOptions, TextChannel } from "discord.js"
+import { Client, Message, MessageCreateOptions, TextChannel } from "discord.js"
 import { disconnectWithReconnectEmbed } from "@main/elements/embeds/reconnect"
 import { reconnectButton } from "@main/elements/buttons/reconnect"
 import { sendSelfDestroyMessage } from "@utils/message"
@@ -21,7 +21,12 @@ export const registerPlayerDisconnectEvent = (manager: Manager, client: Client) 
       const reconnectMessage = await sendSelfDestroyMessage(textChannel, content, config.reconnectEmbedLifeSpan)
       player.set("reconnectMessage", reconnectMessage)
       setTimeout(() => {
-        player.set("reconnectMessage", null)
+        const latestPlayer = manager.get(textChannel.guild.id)
+        const recon: Message | null | undefined = latestPlayer?.get("reconnectMessage")
+        if (recon) {
+          // no new player created
+          player.destroy() // clean up
+        }
       }, config.reconnectEmbedLifeSpan)
     } else {
       await sendSelfDestroyMessage(

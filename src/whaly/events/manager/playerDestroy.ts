@@ -11,5 +11,12 @@ export const registerPlayerDestroyEvent = (manager: Manager) => {
         return null
       })
     }
+    const queueMessage: Message | null | undefined = player.get("queueMessage")
+    if (queueMessage) {
+      queueMessage.delete().catch(() => {
+        err("whaly | can't delete queue message")
+        return null
+      })
+    }
   })
 }

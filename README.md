@@ -4,11 +4,11 @@
 <h2>🔥 Current Status</h2>
 
 Whaly is going to be free discord music bot soon.<br/>
-Adopt one now! (Beta)
+**Adopt one now!** (Beta)
 <code>https://whaly.pryter.me</code>
 
 <h2>✨ Planned Features</h2>
-
+<img style="vertical-align:middle" src="https://progress-bar.dev/85/?scale=100&title=&nbsp;Progress&width=120&color=babaca"/>
 - [X] Bot runtime <br/>
 - [X] Basic bot framework<br/>
 - [X] Play command<br/>

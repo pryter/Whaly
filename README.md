@@ -12,7 +12,7 @@ Whaly is going to be free discord music bot soon.
 - [X] Play command<br/>
 - [X] Player controls<br/>
 - [X] Reconnect & Reload previous queue after user forced disconnect<br/>
-- [ ] Interactive queue display<br/>
+- [X] Interactive queue display<br/>
 - [ ] Other utility commands<br/>
     - Controls (seek, pause, skip, loop, ...)<br/>
     - Shuffle<br/>

@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="Implement interactive queue system &amp;&amp; fix command responses">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="Update README.md">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/message.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/message.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/elements/message/queue.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/message/queue.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +103,7 @@
       <workItem from="1667692235944" duration="2024000" />
       <workItem from="1667721057569" duration="8879000" />
       <workItem from="1667840183792" duration="488000" />
-      <workItem from="1667908996697" duration="8428000" />
+      <workItem from="1667908996697" duration="9283000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -222,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667917423096</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Update README.md">
+      <created>1667917452051</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1667917452051</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -276,7 +285,8 @@
     <MESSAGE value="remove memory watching package" />
     <MESSAGE value="Temporarily load dev discord.js v14" />
     <MESSAGE value="Implement interactive queue system &amp;&amp; fix command responses" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement interactive queue system &amp;&amp; fix command responses" />
+    <MESSAGE value="Update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README.md" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -55,7 +55,12 @@ export const generateQueueMessage = async (player: Player, textChannel: TextChan
       embeds: [queueEmbed(player, 1)], //@ts-ignore
       components: [queueControllerStrip(player)],
     },
-    config.queueEmbedLifeSpan
+    config.queueEmbedLifeSpan,
+    () => {
+      player.set("queueMessage", null)
+      player.set("queuePage", 1)
+      player.set("maxQueuePage", 1)
+    }
   )
   player.set("queuePage", 1)
   player.set("queueMessage", message)
@@ -71,7 +76,15 @@ export const refreshQueueMessage = (player: Player, manager: Manager) => {
   const queueMessage: Message | null | undefined = player.get("queueMessage")
   if (queueMessage) {
     if (player.queue.size === 0) {
-      queueMessage.delete()
+      queueMessage.delete().catch((e) => {
+        player.set("queueMessage", null)
+        player.set("queuePage", 1)
+        player.set("maxQueuePage", 1)
+        return null
+      })
+      player.set("queueMessage", null)
+      player.set("queuePage", 1)
+      player.set("maxQueuePage", 1)
       return
     }
     //refresh queue

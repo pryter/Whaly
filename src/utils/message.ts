@@ -15,11 +15,13 @@ import { Track, UnresolvedTrack } from "erela.js"
 export const sendSelfDestroyMessage = async (
   textChannel: TextChannel,
   content: string | MessagePayload | MessageCreateOptions,
-  duration: number
+  duration: number,
+  task: () => any | Promise<any> = () => {}
 ): Promise<Message | null> => {
   try {
     const message = await textChannel.send(content)
     setTimeout(async () => {
+      task()
       message.delete().catch(() => {
         warn(`whaly | can't delete self destroying message ${message.content}`)
         return null

@@ -28,7 +28,12 @@ export const clearCommand = (): Command => {
 
       const player = manager.players.get(interaction.guild.id)
 
-      if (!player) return
+      if (!player) {
+        sendSelfDestroyReply(interaction, {
+          embeds: [commandResponseEmbed(nothingToBeCleared)],
+        })
+        return
+      }
       if (!player.queue || player.queue.length === 0) {
         sendSelfDestroyReply(interaction, {
           embeds: [ifSomethingPLaying(player, commandResponseEmbed(nothingToBeCleared))],

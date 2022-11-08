@@ -9,6 +9,8 @@ import {
 } from "discord.js"
 import { warn } from "@utils/logger"
 import { config } from "../config"
+import prettyMilliseconds from "pretty-ms"
+import { Track, UnresolvedTrack } from "erela.js"
 
 export const sendSelfDestroyMessage = async (
   textChannel: TextChannel,
@@ -47,4 +49,15 @@ export const sendSelfDestroyReply = async (
   }, duration)
 
   return reply
+}
+
+export const formatTrack = (track: Track | UnresolvedTrack | null) => {
+  if (!track) return "undefined"
+  return `[${track.title}](${track.uri}) by ${track.requester} \`${
+    track.duration
+      ? prettyMilliseconds(track.duration, {
+          colonNotation: true,
+        })
+      : "**null**"
+  }\``
 }

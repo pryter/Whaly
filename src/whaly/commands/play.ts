@@ -7,6 +7,7 @@ import { addedToQueueEmbed } from "@main/elements/embeds/addedToQueue"
 import { commandErrorEmbed } from "@main/elements/embeds/commandError"
 import { searchingError } from "@main/elements/texts"
 import { playlistAddedToQueueEmbed } from "@main/elements/embeds/playlistAddedToQueue"
+import { refreshQueueMessage } from "@main/elements/message/queue"
 
 export const playCommand = (): Command => {
   return {
@@ -81,6 +82,7 @@ export const playCommand = (): Command => {
         case "TRACK_LOADED":
           const track = response.tracks[0]
           player.queue.add(track)
+          refreshQueueMessage(player, manager)
 
           if (!player.playing && !player.paused && !player.queue.size) {
             player.play()
@@ -102,6 +104,7 @@ export const playCommand = (): Command => {
           break
         case "PLAYLIST_LOADED":
           player.queue.add(response.tracks)
+          refreshQueueMessage(player, manager)
 
           if (!player.playing && !player.paused && player.queue.totalSize === response.tracks.length) {
             player.play()

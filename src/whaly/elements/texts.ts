@@ -14,3 +14,6 @@ export const skipPlayingTrackHint = "Sounds like there is a track playing. To cl
 export const nothingToBeCleared = "Phew ~ There is nothing to be cleared."
 export const clearedNItems = (count: number) => `🧹 Cleared ${count} track(s) from the queue!`
 export const skipped = "Skipped current track!"
+
+export const queueGenerated = "Here is your current queue :)"
+export const checkNowPlaying = "There is only one song and I'm playing it :/"

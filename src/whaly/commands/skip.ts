@@ -2,7 +2,7 @@ import { Command } from "@itypes/command/Command"
 import { SlashCommandBuilder } from "discord.js"
 import { getUserVoiceChannel } from "@utils/cache"
 import { commandResponseEmbed } from "@main/elements/embeds/commandResponse"
-import { clearedNItems, nothingToBeCleared, skipped } from "@main/elements/texts"
+import { clearedNItems, noPlayingSongError, nothingToBeCleared, skipped } from "@main/elements/texts"
 import { config } from "../../config"
 import { warn } from "@utils/logger"
 import { sendSelfDestroyReply } from "@utils/message"
@@ -20,7 +20,14 @@ export const skipCommand = (): Command => {
 
       const player = manager.players.get(interaction.guild.id)
 
-      if (!player) return
+      if (!player) {
+        sendSelfDestroyReply(
+          interaction,
+          { embeds: [commandResponseEmbed(noPlayingSongError)] },
+          config.selfDestroyMessageLifeSpan
+        )
+        return
+      }
 
       player.queue.previous = player.queue.current
       player.stop()

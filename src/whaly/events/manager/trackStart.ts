@@ -4,6 +4,7 @@ import { getChannel } from "@utils/cache"
 import { Client, Message, MessageCreateOptions, TextChannel } from "discord.js"
 import { controllerStrip } from "@main/elements/buttons/controllerStrip"
 import { log, warn } from "@utils/logger"
+import { generateQueueMessage, refreshQueueMessage } from "@main/elements/message/queue"
 
 export const registerTrackStartEvent = (manager: Manager, client: Client) => {
   manager.on("trackStart", async (player, track) => {
@@ -26,5 +27,6 @@ export const registerTrackStartEvent = (manager: Manager, client: Client) => {
 
     const nowPlayingMessage = await textChannel.send(content).catch(warn)
     player.set("nowPlaying", nowPlayingMessage)
+    refreshQueueMessage(player, manager)
   })
 }

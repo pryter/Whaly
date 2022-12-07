@@ -1,4 +1,4 @@
-import { BridgeContext, createBridgeContext } from "next-bridge"
+import { type BridgeContext, createBridgeContext } from "next-bridge"
 
 export const getDetailContext: BridgeContext<{}> = createBridgeContext(
   "getDetail",

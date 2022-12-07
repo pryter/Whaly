@@ -1,10 +1,15 @@
-import { Manager } from "erela.js"
-import { nowPlayingEmbed } from "@main/elements/embeds/nowPlaying"
-import { getChannel } from "@utils/cache"
-import { Client, Message, MessageCreateOptions, TextChannel } from "discord.js"
 import { controllerStrip } from "@main/elements/buttons/controllerStrip"
+import { nowPlayingEmbed } from "@main/elements/embeds/nowPlaying"
+import { refreshQueueMessage } from "@main/elements/message/queue"
+import { getChannel } from "@utils/cache"
 import { log, warn } from "@utils/logger"
-import { generateQueueMessage, refreshQueueMessage } from "@main/elements/message/queue"
+import type {
+  Client,
+  Message,
+  MessageCreateOptions,
+  TextChannel
+} from "discord.js"
+import type { Manager } from "erela.js"
 
 export const registerTrackStartEvent = (manager: Manager, client: Client) => {
   manager.on("trackStart", async (player, track) => {
@@ -12,8 +17,8 @@ export const registerTrackStartEvent = (manager: Manager, client: Client) => {
     const textChannel = <TextChannel>getChannel(client, player.textChannel)
     const content: MessageCreateOptions = {
       embeds: [embed],
-      //@ts-ignore
-      components: [controllerStrip(player)],
+      // @ts-ignore
+      components: [controllerStrip(player)]
     }
 
     log(`player | Playing ${track.title} @ ${player.guild}`)

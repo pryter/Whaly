@@ -1,11 +1,12 @@
-import { Manager } from "erela.js"
-import { Client, TextChannel } from "discord.js"
-import { sendSelfDestroyMessage } from "@utils/message"
-import { getChannel } from "@utils/cache"
-import { queueEndEmbed } from "@main/elements/embeds/queueEnd"
 import { disconnectEmbed } from "@main/elements/embeds/discconect"
-import { config } from "../../../config"
+import { queueEndEmbed } from "@main/elements/embeds/queueEnd"
 import { inactivityDisconnectReason } from "@main/elements/texts"
+import { getChannel } from "@utils/cache"
+import { sendSelfDestroyMessage } from "@utils/message"
+import type { Client, TextChannel } from "discord.js"
+import type { Manager } from "erela.js"
+
+import { config } from "../../../config"
 
 export const registerQueueEndEvent = (manager: Manager, client: Client) => {
   manager.on("queueEnd", async (player) => {
@@ -16,7 +17,11 @@ export const registerQueueEndEvent = (manager: Manager, client: Client) => {
       return
     }
 
-    await sendSelfDestroyMessage(textChannel, { embeds: [queueEndEmbed()] }, config.selfDestroyMessageLifeSpan)
+    await sendSelfDestroyMessage(
+      textChannel,
+      { embeds: [queueEndEmbed()] },
+      config.selfDestroyMessageLifeSpan
+    )
 
     setTimeout(async () => {
       if (player.state === "DESTROYING") {

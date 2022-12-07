@@ -1,8 +1,8 @@
-import { LogTypes } from "@itypes/logger/LogTypes"
+import type { LogTypes } from "@itypes/logger/LogTypes"
 import { zeroPad } from "@utils/number"
 
 export const printLog = (text: string, type: LogTypes = "info") => {
-  let colourLit = ""
+  let colourLit
   const resetLit = "\x1b[0m"
 
   switch (type) {
@@ -18,12 +18,16 @@ export const printLog = (text: string, type: LogTypes = "info") => {
     case "warn":
       colourLit = "\x1b[33m"
       break
+    default:
+      colourLit = resetLit
   }
 
   const time = new Date()
-  const formattedDate = `${zeroPad(time.getHours())}:${zeroPad(time.getMinutes())}:${zeroPad(
-    time.getSeconds()
-  )} ${zeroPad(time.getDate())}/${zeroPad(time.getMonth() + 1)}/${time.getFullYear()}`
+  const formattedDate = `${zeroPad(time.getHours())}:${zeroPad(
+    time.getMinutes()
+  )}:${zeroPad(time.getSeconds())} ${zeroPad(time.getDate())}/${zeroPad(
+    time.getMonth() + 1
+  )}/${time.getFullYear()}`
 
   console.log(`${colourLit}${formattedDate} | ${text}${resetLit}`)
 }

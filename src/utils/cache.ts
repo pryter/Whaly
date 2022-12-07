@@ -1,9 +1,22 @@
-import { ButtonInteraction, Channel, Client, CommandInteraction, VoiceBasedChannel } from "discord.js"
 import { commandErrorEmbed } from "@main/elements/embeds/commandError"
-import { differentChannelError, notInVoiceChannelError, notJoinableError } from "@main/elements/texts"
+import {
+  differentChannelError,
+  notInVoiceChannelError,
+  notJoinableError
+} from "@main/elements/texts"
 import { sendSelfDestroyReply } from "@utils/message"
+import type {
+  ButtonInteraction,
+  Channel,
+  Client,
+  CommandInteraction,
+  VoiceBasedChannel
+} from "discord.js"
 
-export const getChannel = (client: Client, textChannel: string | null): Channel | undefined => {
+export const getChannel = (
+  client: Client,
+  textChannel: string | null
+): Channel | undefined => {
   if (!textChannel) return undefined
   return client.channels.cache.get(textChannel)
 }
@@ -21,19 +34,19 @@ export const getUserVoiceChannel = (
   }
   if (!member.voice.channel) {
     sendSelfDestroyReply(interaction, {
-      embeds: [commandErrorEmbed(notInVoiceChannelError)],
+      embeds: [commandErrorEmbed(notInVoiceChannelError)]
     })
     return null
   }
   if (me.voice.channel && member.voice.channel.id !== me.voice.channel.id) {
     sendSelfDestroyReply(interaction, {
-      embeds: [commandErrorEmbed(differentChannelError)],
+      embeds: [commandErrorEmbed(differentChannelError)]
     })
     return null
   }
   if (!member.voice.channel.joinable) {
     sendSelfDestroyReply(interaction, {
-      embeds: [commandErrorEmbed(notJoinableError)],
+      embeds: [commandErrorEmbed(notJoinableError)]
     })
     return null
   }

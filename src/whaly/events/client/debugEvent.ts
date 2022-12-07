@@ -1,5 +1,5 @@
-import { Client } from "discord.js"
 import { err, warn } from "@utils/logger"
+import type { Client } from "discord.js"
 
 export const registerDebugEvent = (client: Client) => {
   client.on("warn", (e) => {

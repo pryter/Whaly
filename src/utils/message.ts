@@ -1,16 +1,17 @@
-import {
+import { warn } from "@utils/logger"
+import type {
   ButtonInteraction,
   CommandInteraction,
   InteractionReplyOptions,
   Message,
   MessageCreateOptions,
   MessagePayload,
-  TextChannel,
+  TextChannel
 } from "discord.js"
-import { warn } from "@utils/logger"
-import { config } from "../config"
+import type { Track, UnresolvedTrack } from "erela.js"
 import prettyMilliseconds from "pretty-ms"
-import { Track, UnresolvedTrack } from "erela.js"
+
+import { config } from "../config"
 
 export const sendSelfDestroyMessage = async (
   textChannel: TextChannel,
@@ -39,13 +40,14 @@ export const sendSelfDestroyReply = async (
   content: string | InteractionReplyOptions,
   duration: number = config.selfDestroyMessageLifeSpan
 ): Promise<Message | null> => {
-  let replyBody: InteractionReplyOptions = typeof content === "string" ? { content: content } : content
+  const replyBody: InteractionReplyOptions =
+    typeof content === "string" ? { content } : content
 
   if (!replyBody) return null
   const reply = await interaction.reply({ ...replyBody, fetchReply: true })
 
   setTimeout(() => {
-    reply.delete().catch((e) => {
+    reply.delete().catch(() => {
       warn("whaly | Unable to delete command reply.")
     })
   }, duration)
@@ -58,7 +60,7 @@ export const formatTrack = (track: Track | UnresolvedTrack | null) => {
   return `[${track.title}](${track.uri}) by ${track.requester} \`${
     track.duration
       ? prettyMilliseconds(track.duration, {
-          colonNotation: true,
+          colonNotation: true
         })
       : "**null**"
   }\``

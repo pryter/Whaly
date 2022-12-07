@@ -1,8 +1,8 @@
+import { err, info } from "@utils/logger"
+import type { Client } from "discord.js"
 import { Manager } from "erela.js"
 
-import { Client } from "discord.js"
 import { buildOption } from "./buildOption"
-import { err, info } from "@utils/logger"
 
 export const createManager = (client: Client) => {
   const manager = new Manager(buildOption(client))

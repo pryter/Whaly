@@ -1,5 +1,10 @@
-import { ButtonInteraction, Guild, TextChannel, VoiceChannel } from "discord.js"
-import { Manager, Player } from "erela.js"
+import type {
+  ButtonInteraction,
+  Guild,
+  TextChannel,
+  VoiceChannel
+} from "discord.js"
+import type { Manager, Player } from "erela.js"
 
 export interface ButtonInteractionData {
   interaction: ButtonInteraction

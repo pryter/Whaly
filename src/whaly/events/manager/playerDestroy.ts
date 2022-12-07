@@ -1,6 +1,6 @@
-import { Manager } from "erela.js"
-import { Client, Message } from "discord.js"
 import { err } from "@utils/logger"
+import type { Message } from "discord.js"
+import type { Manager } from "erela.js"
 
 export const registerPlayerDestroyEvent = (manager: Manager) => {
   manager.on("playerDestroy", (player) => {

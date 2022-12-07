@@ -1,5 +1,7 @@
+import type { ProcessDescription } from "pm2"
+import pm2 from "pm2"
+
 import { getDetailContext } from "@/server/init"
-import pm2, { ProcessDescription } from "pm2"
 
 export const getDetailAction = getDetailContext.helper.createAction(
   async (prams) => {

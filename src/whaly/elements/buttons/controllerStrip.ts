@@ -1,5 +1,15 @@
 import { ActionRowBuilder, ButtonBuilder } from "discord.js"
-import { Player } from "erela.js"
+import type { Player } from "erela.js"
+
+const getLoopButtonAttribute = (
+  queueRepeat: boolean,
+  trackRepeat: boolean
+): [number, string] => {
+  if (!trackRepeat) {
+    return queueRepeat ? [3, "🔁"] : [2, "🔁"]
+  }
+  return [3, "🔂"]
+}
 
 export const controllerStrip = (player: Player): ActionRowBuilder => {
   const createId = (id: string): string => {
@@ -7,19 +17,36 @@ export const controllerStrip = (player: Player): ActionRowBuilder => {
   }
 
   // Create all buttons for the strip
-  const stopButton = new ButtonBuilder().setStyle(2).setCustomId(createId("stop")).setEmoji("⏹️")
-  const prevButton = new ButtonBuilder().setStyle(1).setCustomId(createId("prev")).setEmoji("⏮️")
+  const stopButton = new ButtonBuilder()
+    .setStyle(2)
+    .setCustomId(createId("stop"))
+    .setEmoji("⏹️")
+  const prevButton = new ButtonBuilder()
+    .setStyle(1)
+    .setCustomId(createId("prev"))
+    .setEmoji("⏮️")
   const playPauseButton = new ButtonBuilder()
     .setStyle(player.playing ? 1 : 2)
     .setCustomId(createId("playPause"))
     .setEmoji(player.playing ? "⏸️" : "▶️")
-  const nextButton = new ButtonBuilder().setStyle(1).setCustomId(createId("next")).setEmoji("⏭️")
+  const nextButton = new ButtonBuilder()
+    .setStyle(1)
+    .setCustomId(createId("next"))
+    .setEmoji("⏭️")
+  const loopButtonAttributes = getLoopButtonAttribute(
+    player.queueRepeat,
+    player.trackRepeat
+  )
   const loopButton = new ButtonBuilder()
-    .setStyle(player.trackRepeat ? 3 : player.queueRepeat ? 3 : 2)
+    .setStyle(loopButtonAttributes[0])
     .setCustomId(createId("loop"))
-    .setEmoji(player.trackRepeat ? "🔂" : player.queueRepeat ? "🔁" : "🔁")
+    .setEmoji(loopButtonAttributes[1])
 
-  const strip = new ActionRowBuilder().setComponents(stopButton, prevButton, playPauseButton, nextButton, loopButton)
-
-  return strip
+  return new ActionRowBuilder().setComponents(
+    stopButton,
+    prevButton,
+    playPauseButton,
+    nextButton,
+    loopButton
+  )
 }

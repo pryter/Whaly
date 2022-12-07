@@ -1,10 +1,13 @@
-import { ButtonInteractionData } from "@itypes/interaction/ButtonInteractionData"
+import type { ButtonInteractionData } from "@itypes/interaction/ButtonInteractionData"
 import { createPlayer } from "@main/player/createPlayer"
-import { Message, VoiceChannel } from "discord.js"
 import { info } from "@utils/logger"
+import type { Message, VoiceChannel } from "discord.js"
 
-export const handleReconnectEvent = (buttonInteractionData: ButtonInteractionData) => {
-  const { player, textChannel, voiceChannel, manager, guildId } = buttonInteractionData
+export const handleReconnectEvent = (
+  buttonInteractionData: ButtonInteractionData
+) => {
+  const { player, textChannel, voiceChannel, manager, guildId } =
+    buttonInteractionData
   if (!player) {
     return
   }
@@ -19,7 +22,11 @@ export const handleReconnectEvent = (buttonInteractionData: ButtonInteractionDat
   if (!voiceChannel) {
     return
   }
-  const newPlayer = createPlayer(manager, textChannel, <VoiceChannel>voiceChannel)
+  const newPlayer = createPlayer(
+    manager,
+    textChannel,
+    <VoiceChannel>voiceChannel
+  )
 
   if (oldQueue.current) {
     newPlayer.queue.add(oldQueue.current)

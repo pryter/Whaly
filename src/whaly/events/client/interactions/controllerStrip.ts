@@ -1,15 +1,19 @@
-import { err } from "@utils/logger"
+import type { ButtonInteractionData } from "@itypes/interaction/ButtonInteractionData"
 import { controllerStrip } from "@main/elements/buttons/controllerStrip"
-import { sendSelfDestroyMessage } from "@utils/message"
-import { commandResponseEmbed } from "@main/elements/embeds/commandResponse"
-import { noPlayingSongError, stoppedPlayer } from "@main/elements/texts"
-import { config } from "../../../../config"
 import { commandErrorEmbed } from "@main/elements/embeds/commandError"
+import { commandResponseEmbed } from "@main/elements/embeds/commandResponse"
 import { queueEndEmbed } from "@main/elements/embeds/queueEnd"
-import { ButtonInteractionData } from "@itypes/interaction/ButtonInteractionData"
+import { noPlayingSongError, stoppedPlayer } from "@main/elements/texts"
+import { err } from "@utils/logger"
+import { sendSelfDestroyMessage } from "@utils/message"
 
-export const handleControllerStripEvent = (buttonInteractionData: ButtonInteractionData) => {
-  const { player, textChannel, voiceChannel, action, interaction } = buttonInteractionData
+import { config } from "../../../../config"
+
+export const handleControllerStripEvent = (
+  buttonInteractionData: ButtonInteractionData
+) => {
+  const { player, textChannel, voiceChannel, action, interaction } =
+    buttonInteractionData
   if (!player) {
     err("controllerStrip | Interaction with no player")
     return
@@ -19,12 +23,12 @@ export const handleControllerStripEvent = (buttonInteractionData: ButtonInteract
     return
   }
 
-  const queue = player.queue
+  const { queue } = player
 
   const reloadStrip = () => {
     interaction.update({
-      //@ts-ignore
-      components: [controllerStrip(player)],
+      // @ts-ignore
+      components: [controllerStrip(player)]
     })
   }
 
@@ -40,16 +44,18 @@ export const handleControllerStripEvent = (buttonInteractionData: ButtonInteract
       reloadStrip()
       break
     case "prev":
-      const prevTrack = queue.previous
-      const nextTrack = queue[0]
-      const currentTrack = queue.current
-      if (!prevTrack || !currentTrack) {
-        return
-      }
-      if (prevTrack !== currentTrack && prevTrack !== nextTrack) {
-        queue.splice(0, 0, currentTrack)
-        player.play(prevTrack)
-        interaction.deferUpdate()
+      {
+        const prevTrack = queue.previous
+        const nextTrack = queue[0]
+        const currentTrack = queue.current
+        if (!prevTrack || !currentTrack) {
+          return
+        }
+        if (prevTrack !== currentTrack && prevTrack !== nextTrack) {
+          queue.splice(0, 0, currentTrack)
+          player.play(prevTrack)
+          interaction.deferUpdate()
+        }
       }
       break
     case "playPause":
@@ -67,8 +73,16 @@ export const handleControllerStripEvent = (buttonInteractionData: ButtonInteract
       reloadStrip()
       break
     case "next":
-      if (player.queue.totalSize === 0 || player.trackRepeat || player.queueRepeat) {
-        sendSelfDestroyMessage(textChannel, { embeds: [queueEndEmbed()] }, config.selfDestroyMessageLifeSpan)
+      if (
+        player.queue.totalSize === 0 ||
+        player.trackRepeat ||
+        player.queueRepeat
+      ) {
+        sendSelfDestroyMessage(
+          textChannel,
+          { embeds: [queueEndEmbed()] },
+          config.selfDestroyMessageLifeSpan
+        )
         player.destroy()
         player.set("nowPlaying", null)
         interaction.deferUpdate()
@@ -90,7 +104,7 @@ export const handleControllerStripEvent = (buttonInteractionData: ButtonInteract
       reloadStrip()
       break
     default:
-      err("controllerStrip | Unknown button action " + action)
+      err(`controllerStrip | Unknown button action ${action}`)
       break
   }
 }

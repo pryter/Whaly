@@ -1,9 +1,10 @@
-import { Manager } from "erela.js"
-import { Client, TextChannel } from "discord.js"
-import { getChannel } from "@utils/cache"
-import { sendSelfDestroyMessage } from "@utils/message"
 import { disconnectEmbed } from "@main/elements/embeds/discconect"
 import { unexpectedDisconnectReason } from "@main/elements/texts"
+import { getChannel } from "@utils/cache"
+import { sendSelfDestroyMessage } from "@utils/message"
+import type { Client, TextChannel } from "discord.js"
+import type { Manager } from "erela.js"
+
 import { config } from "../../../config"
 
 export const registerPlayerMoveEvent = (manager: Manager, client: Client) => {
@@ -16,9 +17,9 @@ export const registerPlayerMoveEvent = (manager: Manager, client: Client) => {
         config.selfDestroyMessageLifeSpan
       )
       return player.destroy()
-    } else {
-      player.setVoiceChannel(newChannel)
-      setTimeout(() => player.pause(false), 1000)
     }
+    player.setVoiceChannel(newChannel)
+    setTimeout(() => player.pause(false), 1000)
+    return null
   })
 }

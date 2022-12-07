@@ -1,12 +1,14 @@
-import { restartContext, stopContext } from "@/server/init"
-import pm2, { ProcessDescription } from "pm2"
+import pm2 from "pm2"
+
+import { stopContext } from "@/server/init"
 
 export const stopAction = stopContext.helper.createAction(async (_) => {
-  const promise = new Promise((resolve: (value: boolean) => void, reject) => {
+  const promise = new Promise((resolve: (value: boolean) => void) => {
     pm2.stop("whaly", (err, proc) => {
       if (err) {
         resolve(false)
       }
+
       resolve(true)
     })
   })

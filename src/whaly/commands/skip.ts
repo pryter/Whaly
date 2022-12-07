@@ -1,19 +1,24 @@
-import { Command } from "@itypes/command/Command"
-import { SlashCommandBuilder } from "discord.js"
-import { getUserVoiceChannel } from "@utils/cache"
+import type { Command } from "@itypes/command/Command"
 import { commandResponseEmbed } from "@main/elements/embeds/commandResponse"
-import { clearedNItems, noPlayingSongError, nothingToBeCleared, skipped } from "@main/elements/texts"
-import { config } from "../../config"
-import { warn } from "@utils/logger"
+import { noPlayingSongError, skipped } from "@main/elements/texts"
+import { getUserVoiceChannel } from "@utils/cache"
 import { sendSelfDestroyReply } from "@utils/message"
+import { SlashCommandBuilder } from "discord.js"
+
+import { config } from "../../config"
 
 export const skipCommand = (): Command => {
   return {
     name: "skip",
-    data: new SlashCommandBuilder().setName("skip").setDescription("Skip current song"),
+    data: new SlashCommandBuilder()
+      .setName("skip")
+      .setDescription("Skip current song"),
     runtime: async (manager, interaction) => {
       const textChannel = interaction.channel
-      const voiceChannel = await getUserVoiceChannel(interaction.client, interaction)
+      const voiceChannel = await getUserVoiceChannel(
+        interaction.client,
+        interaction
+      )
       if (!voiceChannel || !textChannel || !interaction.guild) {
         return
       }
@@ -33,8 +38,8 @@ export const skipCommand = (): Command => {
       player.stop()
 
       sendSelfDestroyReply(interaction, {
-        embeds: [commandResponseEmbed(skipped)],
+        embeds: [commandResponseEmbed(skipped)]
       })
-    },
+    }
   }
 }

@@ -10,6 +10,6 @@ export const config = {
   requiredIntents: [
     IntentsBitField.Flags.Guilds,
     IntentsBitField.Flags.GuildVoiceStates,
-    IntentsBitField.Flags.GuildMessages,
-  ],
+    IntentsBitField.Flags.GuildMessages
+  ]
 }

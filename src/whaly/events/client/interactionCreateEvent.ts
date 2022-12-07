@@ -1,18 +1,20 @@
-import { Client, TextChannel, VoiceChannel } from "discord.js"
-import { Manager } from "erela.js"
+import type { ButtonInteractionData } from "@itypes/interaction/ButtonInteractionData"
 import { buildRuntimeIndex } from "@main/commands"
-import { getUserVoiceChannel } from "@utils/cache"
-import { controllerStrip } from "@main/elements/buttons/controllerStrip"
-import { ButtonInteractionData } from "@itypes/interaction/ButtonInteractionData"
 import { handleControllerStripEvent } from "@main/events/client/interactions/controllerStrip"
 import { handleReconnectEvent } from "@main/events/client/interactions/reconnect"
+import { getUserVoiceChannel } from "@utils/cache"
+import type { Client, TextChannel, VoiceChannel } from "discord.js"
+import type { Manager } from "erela.js"
 
-export const registerInteractionCreateEvent = (client: Client, manager: Manager) => {
+export const registerInteractionCreateEvent = (
+  client: Client,
+  manager: Manager
+) => {
   const runtimeIndex = buildRuntimeIndex()
 
   client.on("interactionCreate", (interaction) => {
     if (interaction.isCommand()) {
-      const commandName = interaction.commandName
+      const { commandName } = interaction
 
       // Call runtime
       if (commandName in runtimeIndex) {
@@ -28,7 +30,9 @@ export const registerInteractionCreateEvent = (client: Client, manager: Manager)
       const player = manager.get(guildId)
       const guild = client.guilds.cache.get(guildId)
 
-      const voiceChannel = <VoiceChannel>getUserVoiceChannel(client, interaction)
+      const voiceChannel = <VoiceChannel>(
+        getUserVoiceChannel(client, interaction)
+      )
       const textChannel = <TextChannel>interaction.channel
 
       if (!guild || !player) {
@@ -36,14 +40,14 @@ export const registerInteractionCreateEvent = (client: Client, manager: Manager)
       }
 
       const buttonInteractionData: ButtonInteractionData = {
-        interaction: interaction,
-        manager: manager,
-        action: action,
-        guild: guild,
-        guildId: guildId,
-        player: player,
-        textChannel: textChannel,
-        voiceChannel: voiceChannel,
+        interaction,
+        manager,
+        action,
+        guild,
+        guildId,
+        player,
+        textChannel,
+        voiceChannel
       }
 
       // Controller strip button
@@ -54,7 +58,6 @@ export const registerInteractionCreateEvent = (client: Client, manager: Manager)
 
       if (buttonId.startsWith("reconnect")) {
         handleReconnectEvent(buttonInteractionData)
-        return
       }
     }
   })

@@ -1,7 +1,7 @@
-import { Client } from "discord.js"
 import { AppleMusic } from "better-erela.js-apple"
 import { Spotify } from "better-erela.js-spotify"
-import { ManagerOptions } from "erela.js"
+import type { Client } from "discord.js"
+import type { ManagerOptions } from "erela.js"
 
 export const buildOption = (client: Client): ManagerOptions => {
   return {
@@ -16,14 +16,14 @@ export const buildOption = (client: Client): ManagerOptions => {
         password: process.env.LAVALINK_PASS,
         retryAmount: 200,
         retryDelay: 40,
-        secure: false,
-      },
+        secure: false
+      }
     ],
     send: (id, payload) => {
-      let guild = client.guilds.cache.get(id)
+      const guild = client.guilds.cache.get(id)
       if (guild) {
         guild.shard.send(payload)
       }
-    },
+    }
   }
 }

@@ -1,6 +1,7 @@
-import { ActivityType, Client } from "discord.js"
 import { info } from "@utils/logger"
-import { Manager } from "erela.js"
+import type { Client } from "discord.js"
+import { ActivityType } from "discord.js"
+import type { Manager } from "erela.js"
 
 export const registerReadyEvent = (client: Client, manager: Manager) => {
   client.on("ready", () => {
@@ -11,9 +12,9 @@ export const registerReadyEvent = (client: Client, manager: Manager) => {
         activities: [
           {
             name: "With Your 💖🫶🏻 💞",
-            type: ActivityType.Playing,
-          },
-        ],
+            type: ActivityType.Playing
+          }
+        ]
       })
     }
     updatePresence()

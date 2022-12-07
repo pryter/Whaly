@@ -1,5 +1,5 @@
 import { ActionRowBuilder, ButtonBuilder } from "discord.js"
-import { Player } from "erela.js"
+import type { Player } from "erela.js"
 
 export const queueControllerStrip = (player: Player): ActionRowBuilder => {
   const createId = (id: string): string => {
@@ -20,7 +20,5 @@ export const queueControllerStrip = (player: Player): ActionRowBuilder => {
     .setEmoji("⏭️")
     .setDisabled(currentPage >= maxPage)
 
-  const strip = new ActionRowBuilder().setComponents(prevPageButton, nextPageButton)
-
-  return strip
+  return new ActionRowBuilder().setComponents(prevPageButton, nextPageButton)
 }

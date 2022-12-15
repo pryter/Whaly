@@ -8,8 +8,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="feat: add scheduled indexing event">
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="fix: exclude panel/ from main building source">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/events/scheduled/indexRecords.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/scheduled/indexRecords.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,28 +44,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "code.cleanup.on.save": "true",
-    "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "/Users/peter/Documents/Projects/Whaly/panel",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "/Users/peter/Documents/Projects/Whaly/node_modules/eslint",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/peter/Documents/Projects/Whaly/node_modules/prettier",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/Users/peter/Documents/Projects/Whaly/node_modules/typescript/lib",
-    "two.files.diff.last.used.file": "/Users/peter/Documents/Projects/Whaly/package.json"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/peter/Documents/Projects/Whaly/panel&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;/Users/peter/Documents/Projects/Whaly/node_modules/eslint&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/peter/Documents/Projects/Whaly/node_modules/prettier&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/peter/Documents/Projects/Whaly/node_modules/typescript/lib&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;/Users/peter/Documents/Projects/Whaly/package.json&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/panel" />
@@ -128,7 +129,8 @@
       <workItem from="1670419634584" duration="3231000" />
       <workItem from="1671097226335" duration="839000" />
       <workItem from="1671098071830" duration="4017000" />
-      <workItem from="1671107532343" duration="8756000" />
+      <workItem from="1671107532343" duration="9146000" />
+      <workItem from="1671123731230" duration="146000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -368,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671121623026</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="fix: exclude panel/ from main building source">
+      <created>1671122017627</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1671122017627</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -404,7 +413,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="add start script" />
     <MESSAGE value="set presence" />
     <MESSAGE value="Increase disconnectTime &amp;&amp; fix duplicated now playing embed bug" />
     <MESSAGE value="Implement Reconnect &amp; Reload previous queue after user forced disconnect &amp;&amp; enhance bot stability &amp;&amp; upgrade logging system" />
@@ -429,7 +437,8 @@
     <MESSAGE value="fix: pause event's bug" />
     <MESSAGE value="feature: add scheduled indexing event" />
     <MESSAGE value="feat: add scheduled indexing event" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add scheduled indexing event" />
+    <MESSAGE value="fix: exclude panel/ from main building source" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: exclude panel/ from main building source" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

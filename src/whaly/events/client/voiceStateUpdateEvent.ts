@@ -15,17 +15,21 @@ export const registerVoiceStateUpdateEvent = (
 ) => {
   client.on("voiceStateUpdate", async (oldState, newState) => {
     let action = null
-    if (oldState.channel === null && newState.channel !== null) {
-      action = "join"
-    } else if (oldState.channel !== newState.channel) {
-      action = "leave"
-    }
-
     const guildId = newState.guild.id
     const player = manager.get(guildId)
 
     if (!player || player.state !== "CONNECTED" || !player.textChannel) {
       return
+    }
+
+    if (oldState.channel === null && newState.channel !== null) {
+      action = "join"
+    } else if (oldState.channel !== newState.channel) {
+      if (newState.channel?.id === player.voiceChannel) {
+        action = "join"
+      } else {
+        action = "leave"
+      }
     }
 
     if (oldState.id === process.env.CLIENT_ID) {
@@ -38,6 +42,10 @@ export const registerVoiceStateUpdateEvent = (
     switch (action) {
       case "join":
         {
+          // Ignore other changes from other channel
+          if (newState.channel?.id !== player.voiceChannel) {
+            return
+          }
           const voiceChannel = newState.channel
           if (!voiceChannel) break
           const members = voiceChannel.members.filter(
@@ -66,6 +74,13 @@ export const registerVoiceStateUpdateEvent = (
         break
       case "leave":
         {
+          // Ignore other changes from other channel
+          if (oldState.channel?.id !== player.voiceChannel) {
+            return
+          }
+          if (player.paused) {
+            return
+          }
           const voiceChannel = oldState.channel
           if (!voiceChannel) break
           const members = voiceChannel.members.filter(

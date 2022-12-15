@@ -8,10 +8,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="Rearrange structure">
-      <change afterPath="$PROJECT_DIR$/lint-staged.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="fix: pause event's bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lint-staged.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/lint-staged.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/events/client/voiceStateUpdateEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/client/voiceStateUpdateEvent.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/manager/buildOption.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/manager/buildOption.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/manager/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/manager/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +66,7 @@
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/Users/peter/Documents/Projects/Whaly/node_modules/prettier",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "/Users/peter/Documents/Projects/Whaly/node_modules/typescript/lib",
     "two.files.diff.last.used.file": "/Users/peter/Documents/Projects/Whaly/package.json"
   }
@@ -129,7 +133,8 @@
       <workItem from="1670168966958" duration="6526000" />
       <workItem from="1670419634584" duration="3231000" />
       <workItem from="1671097226335" duration="839000" />
-      <workItem from="1671098071830" duration="2188000" />
+      <workItem from="1671098071830" duration="4017000" />
+      <workItem from="1671107532343" duration="689000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -341,7 +346,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671102546026</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="refactor: rearrange project structure">
+      <created>1671102985721</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1671102985721</updated>
+    </task>
+    <task id="LOCAL-00032" summary="refactor: rearrange project structure">
+      <created>1671102994669</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1671102994669</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -377,9 +396,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Add lavalink service" />
-    <MESSAGE value="Restructure client register events" />
-    <MESSAGE value="Implement controlStrips" />
     <MESSAGE value="Modify track error message" />
     <MESSAGE value="add build script" />
     <MESSAGE value="add start script" />
@@ -402,7 +418,10 @@
     <MESSAGE value="Add panel" />
     <MESSAGE value="Fix code style" />
     <MESSAGE value="Rearrange structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rearrange structure" />
+    <MESSAGE value="refactor: Rearrange project structure" />
+    <MESSAGE value="refactor: rearrange project structure" />
+    <MESSAGE value="fix: pause event's bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: pause event's bug" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -6,7 +6,6 @@ import { buildOption } from "./buildOption"
 
 export const createManager = (client: Client) => {
   const manager = new Manager(buildOption(client))
-
   // Register common node listeners
 
   manager.on("nodeConnect", (_) => {

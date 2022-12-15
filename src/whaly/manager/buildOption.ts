@@ -15,7 +15,7 @@ export const buildOption = (client: Client): ManagerOptions => {
         port: 2333,
         password: process.env.LAVALINK_PASS,
         retryAmount: 200,
-        retryDelay: 40,
+        retryDelay: 2000,
         secure: false
       }
     ],

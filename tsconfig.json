@@ -110,5 +110,10 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true
   },
-  "exclude": ["./out/**/*", "./node_modules/**/*", "**/*.cy.ts"]
+  "exclude": [
+    "./dist/**/*",
+    "./node_modules/**/*",
+    "**/*.cy.ts",
+    "./panel/**/*"
+  ]
 }

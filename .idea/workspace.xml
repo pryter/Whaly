@@ -8,20 +8,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="Fix code style">
-      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="Rearrange structure">
+      <change afterPath="$PROJECT_DIR$/lint-staged.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/.eslintignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/.nvmrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/.prettierrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/commitlint.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/panel/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/panel/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/src/server/actions/restartAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/panel/src/server/actions/restartAction.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/events/client/interactionCreateEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/client/interactionCreateEvent.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +52,7 @@
     "WebServerToolWindowFactoryState": "false",
     "code.cleanup.on.save": "true",
     "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "/Users/peter/Documents/Projects/Whaly",
+    "last_opened_file_path": "/Users/peter/Documents/Projects/Whaly/panel",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -79,8 +69,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/panel" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/whaly/elements/embeds" />
       <recent name="$PROJECT_DIR$/src/whaly/commands" />
       <recent name="$PROJECT_DIR$/src/whaly/events/manager" />
@@ -139,7 +129,7 @@
       <workItem from="1670168966958" duration="6526000" />
       <workItem from="1670419634584" duration="3231000" />
       <workItem from="1671097226335" duration="839000" />
-      <workItem from="1671098071830" duration="1776000" />
+      <workItem from="1671098071830" duration="2188000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -337,7 +327,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670422290474</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Rearrange structure">
+      <created>1671102531809</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1671102531809</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Rearrange structure">
+      <created>1671102546026</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1671102546026</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -373,7 +377,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Remove node_modules" />
     <MESSAGE value="Add lavalink service" />
     <MESSAGE value="Restructure client register events" />
     <MESSAGE value="Implement controlStrips" />
@@ -398,7 +401,8 @@
     <MESSAGE value="Update config" />
     <MESSAGE value="Add panel" />
     <MESSAGE value="Fix code style" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix code style" />
+    <MESSAGE value="Rearrange structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rearrange structure" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

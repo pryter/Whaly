@@ -1,8 +1,10 @@
+import type { Runtime } from "@itypes/command/Command"
 import type { ButtonInteractionData } from "@itypes/interaction/ButtonInteractionData"
 import { buildRuntimeIndex } from "@main/commands"
 import { handleControllerStripEvent } from "@main/events/client/interactions/controllerStrip"
 import { handleReconnectEvent } from "@main/events/client/interactions/reconnect"
 import { getUserVoiceChannel } from "@utils/cache"
+import { warn } from "@utils/logger"
 import type { Client, TextChannel, VoiceChannel } from "discord.js"
 import type { Manager } from "erela.js"
 
@@ -17,9 +19,12 @@ export const registerInteractionCreateEvent = (
       const { commandName } = interaction
 
       // Call runtime
-      if (commandName in runtimeIndex) {
-        runtimeIndex[commandName](manager, interaction)
+      if (!(commandName in runtimeIndex)) {
+        return
       }
+
+      const runtime = <Runtime>runtimeIndex[commandName]
+      runtime(manager, interaction)
     }
 
     if (interaction.isButton()) {
@@ -27,6 +32,12 @@ export const registerInteractionCreateEvent = (
       const actionData = buttonId.split("_")
       const action = actionData[2]
       const guildId = actionData[1]
+
+      if (!guildId || !action) {
+        warn("whaly | button interaction fired without guildId or action")
+        return
+      }
+
       const player = manager.get(guildId)
       const guild = client.guilds.cache.get(guildId)
 

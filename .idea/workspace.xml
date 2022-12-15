@@ -8,64 +8,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="Add panel">
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="Fix code style">
+      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/.nvmrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/commitlint.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/panel/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/panel/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/src/server/actions/getDetailAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/panel/src/server/actions/getDetailAction.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel/src/server/actions/restartAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/panel/src/server/actions/restartAction.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/src/server/actions/stopAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/panel/src/server/actions/stopAction.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/src/server/init.ts" beforeDir="false" afterPath="$PROJECT_DIR$/panel/src/server/init.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/runtime.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/command/Command.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/command/Command.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/interaction/ButtonInteractionData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/interaction/ButtonInteractionData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/array.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/array.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/cache.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/cache.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/commandDeploy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/commandDeploy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/logger.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/logger.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/message.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/message.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/number.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/number.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/commands/clear.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/clear.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/commands/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/commands/play.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/play.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/commands/player.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/player.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/commands/queue.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/queue.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/commands/skip.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/skip.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/elements/buttons/controllerStrip.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/buttons/controllerStrip.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/elements/buttons/queueControllerStrip.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/buttons/queueControllerStrip.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/elements/buttons/reconnect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/buttons/reconnect.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/elements/embeds/addedToQueue.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/embeds/addedToQueue.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/elements/embeds/discconect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/embeds/discconect.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/elements/embeds/nowPlaying.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/embeds/nowPlaying.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/elements/embeds/pause.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/embeds/pause.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/elements/embeds/playlistAddedToQueue.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/embeds/playlistAddedToQueue.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/elements/embeds/queue.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/embeds/queue.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/elements/embeds/queueEnd.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/embeds/queueEnd.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/elements/embeds/reconnect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/embeds/reconnect.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/elements/embeds/resume.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/embeds/resume.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/elements/embeds/trackError.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/embeds/trackError.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/elements/message/queue.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/message/queue.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/elements/texts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/texts.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/events/client/debugEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/client/debugEvent.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/whaly/events/client/interactionCreateEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/client/interactionCreateEvent.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/events/client/interactions/controllerStrip.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/client/interactions/controllerStrip.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/events/client/interactions/reconnect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/client/interactions/reconnect.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/events/client/rawEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/client/rawEvent.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/events/client/readyEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/client/readyEvent.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/events/client/voiceStateUpdateEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/client/voiceStateUpdateEvent.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/playerDestroy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/playerDestroy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/playerDisconnect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/playerDisconnect.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/playerMove.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/playerMove.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/queueEnd.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/queueEnd.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/trackError.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/trackError.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/trackStart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/trackStart.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/manager/buildOption.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/manager/buildOption.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/manager/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/manager/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/player/createPlayer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/player/createPlayer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +45,7 @@
     <scope name="ts" pattern="file[Whaly]:src/*" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2Gz0QQYpnFaJ3y4Fk6gR8YQoqB9" />
   <component name="ProjectLevelVcsManager">
@@ -105,18 +61,20 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "code.cleanup.on.save": "true",
+    "js.linters.configure.manually.selectedeslint": "true",
     "last_opened_file_path": "/Users/peter/Documents/Projects/Whaly",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.eslint": "/Users/peter/Documents/Projects/Whaly/node_modules/eslint",
     "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/Users/peter/Documents/Projects/Whaly/node_modules/prettier",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.sourceCode.TypeScript",
-    "ts.external.directory.path": "/Users/peter/Documents/Projects/Whaly/node_modules/typescript/lib"
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "ts.external.directory.path": "/Users/peter/Documents/Projects/Whaly/node_modules/typescript/lib",
+    "two.files.diff.last.used.file": "/Users/peter/Documents/Projects/Whaly/package.json"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -179,7 +137,9 @@
       <workItem from="1668185320631" duration="1430000" />
       <workItem from="1668681906483" duration="177000" />
       <workItem from="1670168966958" duration="6526000" />
-      <workItem from="1670419634584" duration="2592000" />
+      <workItem from="1670419634584" duration="3231000" />
+      <workItem from="1671097226335" duration="839000" />
+      <workItem from="1671098071830" duration="1776000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -370,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670174654839</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Fix code style">
+      <created>1670422290474</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1670422290474</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -406,7 +373,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Updated" />
     <MESSAGE value="Remove node_modules" />
     <MESSAGE value="Add lavalink service" />
     <MESSAGE value="Restructure client register events" />
@@ -431,7 +397,8 @@
     <MESSAGE value="Update README.md" />
     <MESSAGE value="Update config" />
     <MESSAGE value="Add panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add panel" />
+    <MESSAGE value="Fix code style" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix code style" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

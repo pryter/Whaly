@@ -9,6 +9,8 @@ import { registerPlayerMoveEvent } from "@main/events/manager/playerMove"
 import { registerQueueEndEvent } from "@main/events/manager/queueEnd"
 import { registerTrackErrorEvent } from "@main/events/manager/trackError"
 import { registerTrackStartEvent } from "@main/events/manager/trackStart"
+import { registerScheduledIndexRecordsEvent } from "@main/events/scheduled/indexRecords"
+import { createDatabase } from "@main/firebase/init"
 import { createManager } from "@main/manager"
 import { info } from "@utils/logger"
 import { Client } from "discord.js"
@@ -26,9 +28,13 @@ const runtime = () => {
   })
 
   const manager = createManager(client)
+  const database = createDatabase()
+
+  // Register scheduled events
+  registerScheduledIndexRecordsEvent(database, client)
 
   // Register manager events
-  registerTrackStartEvent(manager, client)
+  registerTrackStartEvent(manager, client, database)
   registerQueueEndEvent(manager, client)
   registerTrackErrorEvent(manager, client)
   registerPlayerMoveEvent(manager, client)

@@ -1,3 +1,4 @@
+import type { Database } from "@itypes/database/Database"
 import { controllerStrip } from "@main/elements/buttons/controllerStrip"
 import { nowPlayingEmbed } from "@main/elements/embeds/nowPlaying"
 import { refreshQueueMessage } from "@main/elements/message/queue"
@@ -11,7 +12,11 @@ import type {
 } from "discord.js"
 import type { Manager } from "erela.js"
 
-export const registerTrackStartEvent = (manager: Manager, client: Client) => {
+export const registerTrackStartEvent = (
+  manager: Manager,
+  client: Client,
+  database: Database
+) => {
   manager.on("trackStart", async (player, track) => {
     const embed = nowPlayingEmbed(track)
     const textChannel = <TextChannel>getChannel(client, player.textChannel)
@@ -22,6 +27,11 @@ export const registerTrackStartEvent = (manager: Manager, client: Client) => {
     }
 
     log(`player | Playing ${track.title} @ ${player.guild}`)
+
+    database?.collection("records").add({
+      title: track.title,
+      source: track.uri
+    })
 
     const nowPlaying: Message | null | undefined = player.get("nowPlaying")
 

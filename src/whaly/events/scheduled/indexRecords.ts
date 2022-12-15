@@ -40,7 +40,7 @@ export const registerScheduledIndexRecordsEvent = (
   client: Client
 ) => {
   try {
-    schedule.scheduleJob("18 */4 * * *", () => {
+    schedule.scheduleJob("22 00/4 * * *", () => {
       client.user?.setPresence({
         status: "online",
         activities: [
@@ -51,7 +51,7 @@ export const registerScheduledIndexRecordsEvent = (
         ]
       })
     })
-    schedule.scheduleJob("20 */4 * * *", async () => {
+    schedule.scheduleJob("25 00/4 * * *", async () => {
       const indexedData = await database
         ?.collection("indexed")
         .doc("main")

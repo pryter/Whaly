@@ -19,7 +19,7 @@ Whaly is going to be free discord music bot soon.<br/>
 - [X] Other utility commands<br/>
     - Controls (seek, pause, skip, loop, ...)<br/>
     - Shuffle<br/>
-    - <s>Some filters<s/><br/>
+    - <s>Some filters</s><br/>
 - [X] Auto pause<br/>
 - [X] Global stats web page <br/>
 - [X] Internal web controller <br/>

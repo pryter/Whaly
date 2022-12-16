@@ -16,12 +16,13 @@ Whaly is going to be free discord music bot soon.<br/>
 - [X] Player controls<br/>
 - [X] Reconnect & Reload previous queue after user forced disconnect<br/>
 - [X] Interactive queue display<br/>
-- [ ] Other utility commands<br/>
+- [X] Other utility commands<br/>
     - Controls (seek, pause, skip, loop, ...)<br/>
     - Shuffle<br/>
-    - Some filters<br/>
+    - <s>Some filters<s/><br/>
 - [X] Auto pause<br/>
-- [ ] Global stats web page <br/>
+- [X] Global stats web page <br/>
+- [X] Internal web controller <br/>
 - [ ] Web Interface <br/>
 
 <h2>🧂 Description</h2>

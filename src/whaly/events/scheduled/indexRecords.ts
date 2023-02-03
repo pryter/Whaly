@@ -7,8 +7,6 @@ import schedule from "node-schedule"
 import DocumentData = firestore.DocumentData
 import QuerySnapshot = firestore.QuerySnapshot
 
-import { config } from "../../../config"
-
 const indexData = (
   indexedData: IndexedData,
   records: QuerySnapshot<DocumentData>
@@ -24,8 +22,6 @@ const indexData = (
       indexedRecord[url].playCount += 1
       return
     }
-
-    if (Object.keys(indexedRecord).length >= config.rankingSize) return
     // @ts-ignore
     indexedRecord[url] = {
       title,

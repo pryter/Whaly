@@ -31,6 +31,62 @@ const indexData = (
 
   return indexedRecord
 }
+
+const convertIndexedDataToArray = (indexedData: IndexedData) => {
+  const arr: { url: string; title: string; playCount: number }[] = []
+
+  Object.keys(indexedData).forEach((k) => {
+    // @ts-ignore
+    arr.push({ url: k, ...indexedData[k] })
+  })
+
+  return arr
+}
+
+const convertArraytoIndexedData = (
+  arr: { url: string; title: string; playCount: number }[]
+): IndexedData => {
+  const obj: IndexedData = {}
+  arr.forEach((v) => {
+    obj[v.url] = {
+      title: v.title,
+      playCount: v.playCount
+    }
+  })
+
+  return obj
+}
+
+export const indexRanking = async (database: Database) => {
+  const indexedData = await database?.collection("indexed").doc("main").get()
+  const records = await database?.collection("records").get()
+
+  const objectIndexedData = <IndexedData>indexedData?.get("ranking")
+
+  if (!records) return
+
+  const ranking = indexData(objectIndexedData, records)
+  const rankingArr = convertIndexedDataToArray(ranking)
+  const sorted = rankingArr.sort((a, b) => b.playCount - a.playCount)
+  const top50 = sorted.slice(0, 50)
+  const top100 = sorted.slice(0, 100)
+
+  database?.collection("indexed").doc("main").set({
+    time: new Date().getTime(),
+    ranking
+  })
+
+  database?.collection("indexed").doc("top50").set({
+    time: new Date().getTime(),
+    ranking: top50
+  })
+
+  database?.collection("indexed").doc("top100").set({
+    time: new Date().getTime(),
+    ranking: top100
+  })
+}
+
 export const registerScheduledIndexRecordsEvent = (
   database: Database,
   client: Client
@@ -48,23 +104,7 @@ export const registerScheduledIndexRecordsEvent = (
       })
     })
     schedule.scheduleJob("30 00/4 * * *", async () => {
-      const indexedData = await database
-        ?.collection("indexed")
-        .doc("main")
-        .get()
-      const records = await database?.collection("records").get()
-
-      const objectIndexedData = <IndexedData>indexedData?.get("ranking")
-
-      if (!records) return
-
-      database
-        ?.collection("indexed")
-        .doc("main")
-        .set({
-          time: new Date().getTime(),
-          ranking: indexData(objectIndexedData, records)
-        })
+      await indexRanking(database)
 
       client.user?.setPresence({
         status: "online",

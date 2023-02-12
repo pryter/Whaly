@@ -24,6 +24,7 @@ Whaly is going to be free discord music bot soon.<br/>
 - [X] Global stats web page <br/>
 - [X] Internal web controller <br/>
 - [ ] Web Interface <br/>
+- [ ] Play TOP-50 and TOP-100 command <br/>
 
 <h2>🧂 Description</h2>
 Node v16.17<br/>

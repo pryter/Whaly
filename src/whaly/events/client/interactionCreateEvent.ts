@@ -7,10 +7,12 @@ import { getUserVoiceChannel } from "@utils/cache"
 import { warn } from "@utils/logger"
 import type { Client, TextChannel, VoiceChannel } from "discord.js"
 import type { Manager } from "erela.js"
+import type { Firestore } from "firebase-admin/firestore"
 
 export const registerInteractionCreateEvent = (
   client: Client,
-  manager: Manager
+  manager: Manager,
+  database: Firestore | null
 ) => {
   const runtimeIndex = buildRuntimeIndex()
 
@@ -24,7 +26,7 @@ export const registerInteractionCreateEvent = (
       }
 
       const runtime = <Runtime>runtimeIndex[commandName]
-      runtime(manager, interaction)
+      runtime(manager, interaction, database)
     }
 
     if (interaction.isButton()) {

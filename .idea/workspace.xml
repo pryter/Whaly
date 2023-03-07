@@ -8,9 +8,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="doc: Update readme">
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="docs: update readme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runtime.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/command/Command.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/command/Command.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/commands/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/events/client/interactionCreateEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/client/interactionCreateEvent.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,34 +47,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/peter/Documents/Projects/Whaly/panel&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;/Users/peter/Documents/Projects/Whaly/node_modules/eslint&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/peter/Documents/Projects/Whaly/node_modules/prettier&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/peter/Documents/Projects/Whaly/node_modules/typescript/lib&quot;,
-    &quot;two.files.diff.last.used.file&quot;: &quot;/Users/peter/Documents/Projects/Whaly/package.json&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "code.cleanup.on.save": "true",
+    "js.linters.configure.manually.selectedeslint": "true",
+    "last_opened_file_path": "/Users/peter/Documents/Projects/Whaly/src/whaly/elements/embeds",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "/Users/peter/Documents/Projects/Whaly/node_modules/eslint",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/peter/Documents/Projects/Whaly/node_modules/prettier",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
+    "ts.external.directory.path": "/Users/peter/Documents/Projects/Whaly/node_modules/typescript/lib",
+    "two.files.diff.last.used.file": "/Users/peter/Documents/Projects/Whaly/package.json",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/panel" />
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/whaly/elements/embeds" />
       <recent name="$PROJECT_DIR$/src/whaly/commands" />
+      <recent name="$PROJECT_DIR$/panel" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/whaly/events/manager" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -132,7 +136,17 @@
       <workItem from="1671107532343" duration="9146000" />
       <workItem from="1671123731230" duration="3262000" />
       <workItem from="1675403458269" duration="441000" />
-      <workItem from="1676192195507" duration="2358000" />
+      <workItem from="1676192195507" duration="2371000" />
+      <workItem from="1676540262713" duration="16000" />
+      <workItem from="1676540289834" duration="4000" />
+      <workItem from="1677061772527" duration="398000" />
+      <workItem from="1677062576220" duration="63000" />
+      <workItem from="1677316319197" duration="17000" />
+      <workItem from="1677330592740" duration="18000" />
+      <workItem from="1677348356465" duration="469000" />
+      <workItem from="1677606845133" duration="226000" />
+      <workItem from="1678006218835" duration="475000" />
+      <workItem from="1678179488221" duration="3727000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -435,7 +449,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676194210713</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="docs: update readme">
+      <created>1676194560945</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1676194560945</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -471,7 +492,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Improve code staability &amp;&amp; memory report" />
     <MESSAGE value="remove memory watching package" />
     <MESSAGE value="Temporarily load dev discord.js v14" />
     <MESSAGE value="Implement interactive queue system &amp;&amp; fix command responses" />
@@ -496,7 +516,8 @@
     <MESSAGE value="feat: improve ranking algorithm &amp;&amp; added script for ranking" />
     <MESSAGE value="docs: Update readme" />
     <MESSAGE value="doc: Update readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="doc: Update readme" />
+    <MESSAGE value="docs: update readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="docs: update readme" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

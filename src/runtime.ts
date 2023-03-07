@@ -44,7 +44,7 @@ const runtime = () => {
   // Register client events
   registerReadyEvent(client, manager)
   registerRawEvent(client, manager)
-  registerInteractionCreateEvent(client, manager)
+  registerInteractionCreateEvent(client, manager, database)
   registerVoiceStateUpdateEvent(client, manager)
 
   registerDebugEvent(client)

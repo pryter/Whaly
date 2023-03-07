@@ -2,6 +2,7 @@ import type { Command, Runtime } from "@itypes/command/Command"
 import { clearCommand } from "@main/commands/clear"
 import { playCommand } from "@main/commands/play"
 import { playerCommand } from "@main/commands/player"
+import { playTop50 } from "@main/commands/playtop50"
 import { queueCommand } from "@main/commands/queue"
 import { skipCommand } from "@main/commands/skip"
 
@@ -10,7 +11,8 @@ const allCommands: Command[] = [
   clearCommand(),
   skipCommand(),
   queueCommand(),
-  playerCommand()
+  playerCommand(),
+  playTop50()
 ]
 
 export const getAllCommandData = (): Command[] => {

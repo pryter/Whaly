@@ -8,6 +8,7 @@ import type {
   Client,
   Message,
   MessageCreateOptions,
+  MessageEditOptions,
   TextChannel
 } from "discord.js"
 import type { Manager } from "erela.js"
@@ -20,7 +21,7 @@ export const registerTrackStartEvent = (
   manager.on("trackStart", async (player, track) => {
     const embed = nowPlayingEmbed(track)
     const textChannel = <TextChannel>getChannel(client, player.textChannel)
-    const content: MessageCreateOptions = {
+    const content = {
       embeds: [embed],
       // @ts-ignore
       components: [controllerStrip(player)]
@@ -38,11 +39,13 @@ export const registerTrackStartEvent = (
     refreshQueueMessage(player, manager)
 
     if (nowPlaying) {
-      nowPlaying.edit(content)
+      nowPlaying.edit(<MessageEditOptions>content)
       return
     }
 
-    const nowPlayingMessage = await textChannel.send(content).catch(warn)
+    const nowPlayingMessage = await textChannel
+      .send(<MessageCreateOptions>content)
+      .catch(warn)
     player.set("nowPlaying", nowPlayingMessage)
   })
 }

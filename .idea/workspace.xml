@@ -8,10 +8,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="feat: add TOP-50 command">
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="fix: bump lavalink version">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/trackStart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/trackStart.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/lavalink/Lavalink.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runtime.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +38,9 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
   <component name="ProjectId" id="2Gz0QQYpnFaJ3y4Fk6gR8YQoqB9" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -78,11 +82,11 @@
       <recent name="$PROJECT_DIR$/src/whaly/events/manager" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/service/lavalink" />
       <recent name="$PROJECT_DIR$/src/scripts" />
       <recent name="$PROJECT_DIR$/src/cli/bin" />
       <recent name="$PROJECT_DIR$/src/whaly/events/manager" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/types/command" />
     </key>
   </component>
   <component name="RunManager">
@@ -147,7 +151,10 @@
       <workItem from="1678006218835" duration="475000" />
       <workItem from="1678179488221" duration="4412000" />
       <workItem from="1680175105069" duration="14000" />
-      <workItem from="1681383214451" duration="1113000" />
+      <workItem from="1681383214451" duration="1199000" />
+      <workItem from="1681384684979" duration="1950000" />
+      <workItem from="1682096549429" duration="1769000" />
+      <workItem from="1691637614001" duration="437000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -464,7 +471,28 @@
       <option name="project" value="LOCAL" />
       <updated>1678183305836</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="fix: bump discord.js version">
+      <created>1681384388500</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1681384388500</updated>
+    </task>
+    <task id="LOCAL-00047" summary="fix: bump lavalink version">
+      <created>1682098097879</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1682098097879</updated>
+    </task>
+    <task id="LOCAL-00048" summary="fix: bump lavalink version">
+      <created>1682098203324</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1682098203324</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -500,8 +528,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Implement interactive queue system &amp;&amp; fix command responses" />
-    <MESSAGE value="Fix queue delete error" />
     <MESSAGE value="Fix queue update bug" />
     <MESSAGE value="Implement auto pause" />
     <MESSAGE value="Set status every 1 hour" />
@@ -525,7 +551,9 @@
     <MESSAGE value="docs: update readme" />
     <MESSAGE value="feat: TOP-50 command" />
     <MESSAGE value="feat: add TOP-50 command" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add TOP-50 command" />
+    <MESSAGE value="fix: bump discord.js version" />
+    <MESSAGE value="fix: bump lavalink version" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: bump lavalink version" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

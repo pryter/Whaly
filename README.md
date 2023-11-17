@@ -30,7 +30,7 @@ Whaly is going to be free discord music bot soon.<br/>
 Node v16.17<br/>
 Discord.js v14<br/>
 erela.js v2.4<br/>
-Lavalink Server
+Lavalink Server 
 
 <h2>🎨 Credits things</h2>
 Inspired by: https://github.com/SudhanPlayz/Discord-MusicBot <br/>

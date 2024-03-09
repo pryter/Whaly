@@ -11,6 +11,7 @@ export const createPlayer = (
     voiceChannel: voiceChannel.id,
     textChannel: textChannel.id,
     selfMute: false,
-    volume: 100
+    volume: 100,
+    instaUpdateFiltersFix: false
   })
 }

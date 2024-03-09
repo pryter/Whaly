@@ -88,7 +88,7 @@ export const playCommand = (): Command => {
       }
 
       switch (response.loadType) {
-        case "NO_MATCHES":
+        case "empty":
           if (!player.queue.current) {
             player.destroy()
           }
@@ -102,8 +102,8 @@ export const playCommand = (): Command => {
             })
             .catch(warn)
           break
-        case "SEARCH_RESULT":
-        case "TRACK_LOADED":
+        case "search":
+        case "track":
           {
             const track = <Track>response.tracks[0]
             player.queue.add(track)
@@ -130,7 +130,7 @@ export const playCommand = (): Command => {
               .catch(warn)
           }
           break
-        case "PLAYLIST_LOADED":
+        case "playlist":
           {
             player.queue.add(response.tracks)
             refreshQueueMessage(player, manager)

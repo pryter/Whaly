@@ -8,10 +8,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="fix: bump lavalink version">
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="build: remove tailwindcss related deps">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/commands/play.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/play.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/commands/playtop50.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/playtop50.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/manager/buildOption.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/manager/buildOption.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/player/createPlayer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/player/createPlayer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +40,7 @@
     <scope name="ts" pattern="file[Whaly]:src/*" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -80,8 +85,8 @@
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" show_stripe_button="false" />
       <window_info id="Learn" show_stripe_button="false" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19090909" />
-      <window_info id="Commit" order="1" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24670845" />
+      <window_info active="true" id="Commit" order="1" visible="true" weight="0.24670845" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" show_stripe_button="false" />
@@ -89,12 +94,14 @@
       <window_info anchor="bottom" id="TODO" show_stripe_button="false" />
       <window_info anchor="bottom" id="File Transfer" show_stripe_button="false" />
       <window_info active="true" anchor="bottom" id="Run" visible="true" weight="0.33045456" />
+      <window_info anchor="bottom" id="Find" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
-      <window_info anchor="bottom" id="Problems View" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.33045456" />
+      <window_info anchor="bottom" id="Problems View" order="2" weight="0.33045456" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.33045456" />
       <window_info anchor="bottom" id="Services" order="4" />
       <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
+      <window_info anchor="right" id="Coverage" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
       <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
       <window_info anchor="right" id="Database" order="2" weight="0.25" />
@@ -193,7 +200,9 @@
       <workItem from="1691637614001" duration="437000" />
       <workItem from="1708787807501" duration="488000" />
       <workItem from="1708788305897" duration="87000" />
-      <workItem from="1708788399066" duration="644000" />
+      <workItem from="1708788399066" duration="1108000" />
+      <workItem from="1709992802872" duration="788000" />
+      <workItem from="1709993837034" duration="642000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -531,7 +540,15 @@
       <option name="project" value="LOCAL" />
       <updated>1682098203324</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="build: remove tailwindcss related deps">
+      <option name="closed" value="true" />
+      <created>1708789241758</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1708789241758</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -567,7 +584,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Fix queue update bug" />
     <MESSAGE value="Implement auto pause" />
     <MESSAGE value="Set status every 1 hour" />
     <MESSAGE value="Improve bot stability" />
@@ -592,7 +608,8 @@
     <MESSAGE value="feat: add TOP-50 command" />
     <MESSAGE value="fix: bump discord.js version" />
     <MESSAGE value="fix: bump lavalink version" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: bump lavalink version" />
+    <MESSAGE value="build: remove tailwindcss related deps" />
+    <option name="LAST_COMMIT_MESSAGE" value="build: remove tailwindcss related deps" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

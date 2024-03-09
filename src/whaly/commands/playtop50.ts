@@ -81,7 +81,7 @@ export const playTop50 = (): Command => {
 
       const embed = top50PlaylistAddedToQueueEmbed(
         "https://pryter.me/whaly/ranking",
-        { name: "Whaly - Global TOP 50", duration: 0 }
+        { name: "Whaly - Global TOP 50", duration: 0, selectedTrack: null }
       )
 
       await interaction.editReply({ embeds: [embed] }).catch(warn)

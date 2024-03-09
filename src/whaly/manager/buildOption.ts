@@ -1,11 +1,9 @@
-import { AppleMusic } from "better-erela.js-apple"
-import { Spotify } from "better-erela.js-spotify"
 import type { Client } from "discord.js"
 import type { ManagerOptions } from "erela.js"
 
 export const buildOption = (client: Client): ManagerOptions => {
   return {
-    plugins: [new AppleMusic(), new Spotify()],
+    plugins: [],
     autoPlay: true,
     clientName: "whaly",
     nodes: [
@@ -16,6 +14,8 @@ export const buildOption = (client: Client): ManagerOptions => {
         password: process.env.LAVALINK_PASS,
         retryAmount: 200,
         retryDelay: 2000,
+        version: "v4",
+        useVersionPath: true,
         secure: false
       }
     ],

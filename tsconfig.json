@@ -107,13 +107,16 @@
     // "allowUnreachableCode": true,                     /* Disable error reporting for unreachable code. */
 
     /* Completeness */
-    // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
+    "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true
   },
   "exclude": [
     "./dist/**/*",
     "./node_modules/**/*",
     "**/*.cy.ts",
-    "./panel/**/*"
+    "./panel/**/*",
+    "./node_modules",
+    "./node_modules/*",
+    "./node_modules/@types/node/index.d.ts"
   ]
 }

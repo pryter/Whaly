@@ -27,9 +27,13 @@ export const registerTrackStartEvent = (
       components: [controllerStrip(player)]
     }
 
-    log(`player | Playing ${track.title} @ ${player.guild}`)
+    const retriedTrack: string = player.get("retriedTrack")
 
-    player.set("retries", 0)
+    if (retriedTrack !== track.title) {
+      player.set("retries", 0)
+    }
+
+    log(`player | Playing ${track.title} @ ${player.guild}`)
 
     database?.collection("records").add({
       title: track.title,

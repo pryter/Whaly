@@ -8,10 +8,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="fix: fix reconnect error &amp;&amp; added track interrupted embed &amp;&amp; improve stability">
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="fix: infinite retries bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/trackError.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/trackError.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/trackStart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/trackStart.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +96,7 @@
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
       <window_info anchor="bottom" id="Problems View" order="2" weight="0.33045456" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.32970673" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.32970673" />
       <window_info anchor="bottom" id="Services" order="4" />
       <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
       <window_info anchor="right" id="Coverage" side_tool="true" />
@@ -216,7 +217,7 @@
       <workItem from="1709993837034" duration="750000" />
       <workItem from="1720541904114" duration="599000" />
       <workItem from="1723980143308" duration="3061000" />
-      <workItem from="1723985724043" duration="4068000" />
+      <workItem from="1723985724043" duration="5330000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -554,15 +555,15 @@
       <option name="project" value="LOCAL" />
       <updated>1682098203324</updated>
     </task>
-    <task id="LOCAL-00054" summary="fix: fix reconnect error &amp;&amp; added track interrupted embed &amp;&amp; improve stability">
+    <task id="LOCAL-00055" summary="fix: infinite retries bug">
       <option name="closed" value="true" />
-      <created>1723991728474</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
+      <created>1723992079980</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
       <option name="project" value="LOCAL" />
-      <updated>1723991728474</updated>
+      <updated>1723992079980</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -598,7 +599,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Add panel" />
     <MESSAGE value="Fix code style" />
     <MESSAGE value="Rearrange structure" />
     <MESSAGE value="refactor: Rearrange project structure" />
@@ -623,7 +623,8 @@
     <MESSAGE value="build: remove unnecessary files" />
     <MESSAGE value="fix: script functions error" />
     <MESSAGE value="fix: fix reconnect error &amp;&amp; added track interrupted embed &amp;&amp; improve stability" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: fix reconnect error &amp;&amp; added track interrupted embed &amp;&amp; improve stability" />
+    <MESSAGE value="fix: infinite retries bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: infinite retries bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -11,6 +11,7 @@ export const registerTrackErrorEvent = (manager: Manager, client: Client) => {
   manager.on("trackError", async (player, track, error) => {
     err(`Track error @ ${error.guildId}: ${error.error}`)
     let retries: number | null | undefined = player.get("retries")
+
     if (typeof retries !== "number") {
       retries = 0
     }
@@ -19,6 +20,8 @@ export const registerTrackErrorEvent = (manager: Manager, client: Client) => {
       player.queue.add(track)
       player.play(track)
       player.set("retries", retries + 1)
+      player.set("retriedTrack", track.title)
+
       warn(`Track retries count: ${retries + 1}`)
       return
     }

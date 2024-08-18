@@ -3,7 +3,7 @@ import { controllerStrip } from "@main/elements/buttons/controllerStrip"
 import { nowPlayingEmbed } from "@main/elements/embeds/nowPlaying"
 import { refreshQueueMessage } from "@main/elements/message/queue"
 import { getChannel } from "@utils/cache"
-import { log, warn } from "@utils/logger"
+import { log } from "@utils/logger"
 import type {
   Client,
   Message,
@@ -27,12 +27,6 @@ export const registerTrackStartEvent = (
       components: [controllerStrip(player)]
     }
 
-    const retriedTrack: string = player.get("retriedTrack")
-
-    if (retriedTrack !== track.title) {
-      player.set("retries", 0)
-    }
-
     log(`player | Playing ${track.title} @ ${player.guild}`)
 
     database?.collection("records").add({
@@ -44,14 +38,21 @@ export const registerTrackStartEvent = (
 
     refreshQueueMessage(player, manager)
 
-    if (nowPlaying) {
-      nowPlaying.edit(<MessageEditOptions>content)
+    const retriedTrack: string = player.get("retriedTrack")
+
+    if (retriedTrack === track.title) {
       return
     }
 
-    const nowPlayingMessage = await textChannel
-      .send(<MessageCreateOptions>content)
-      .catch(warn)
+    if (nowPlaying) {
+      await nowPlaying.edit(<MessageEditOptions>content)
+      return
+    }
+
+    const nowPlayingMessage = await textChannel.send(
+      <MessageCreateOptions>content
+    )
+
     player.set("nowPlaying", nowPlayingMessage)
   })
 }

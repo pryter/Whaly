@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LAVALINK_VERSION="4.0.7"
-YT_PLUGIN_VERSION="1.5.2"
+YT_PLUGIN_VERSION="1.6.0"
 
 TEMPLATE="scripts/application_template.yml"
 createApplicationConfig() {

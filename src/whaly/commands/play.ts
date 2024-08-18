@@ -87,6 +87,9 @@ export const playCommand = (): Command => {
         return reply.delete()
       }
 
+      player.set("retries", 0)
+      player.set("retriedTrack", "")
+
       switch (response.loadType) {
         case "empty":
           if (!player.queue.current) {

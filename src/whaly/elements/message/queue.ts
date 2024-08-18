@@ -20,6 +20,7 @@ const createCollector = (manager: Manager, channel: TextChannel) => {
       idle: 30e3
     })
   collector.on("collect", async (button: ButtonInteraction) => {
+    if (!button.customId.includes("queueStrip")) return
     if (!button.guild?.id) return
     const player = manager.players.get(button.guild?.id)
     if (!player) return

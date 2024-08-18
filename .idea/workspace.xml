@@ -8,11 +8,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="fix: infinite retries bug">
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="fix: retries counter reset">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/application_template.yml" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/application_template.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/setup.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runtime.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/commands/play.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/play.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/elements/message/queue.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/elements/message/queue.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/trackError.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/trackError.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/trackStart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/trackStart.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +34,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/node_modules/erela.js/dist/structures/Manager.d.ts" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -49,31 +58,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "code.cleanup.on.save": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/peter/IdeaProjects/Whaly/src/whaly/elements/embeds",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "/Users/peter/Documents/Projects/Whaly/node_modules/prettier",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
-    "ts.external.directory.path": "/home/peter/IdeaProjects/Whaly/node_modules/typescript/lib",
-    "two.files.diff.last.used.file": "/Users/peter/Documents/Projects/Whaly/package.json",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/peter/IdeaProjects/Whaly/src/whaly/elements/embeds&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/peter/Documents/Projects/Whaly/node_modules/prettier&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/peter/IdeaProjects/Whaly/node_modules/typescript/lib&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;/Users/peter/Documents/Projects/Whaly/package.json&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
       <window_info id="Space Code Reviews" show_stripe_button="false" />
@@ -217,7 +226,8 @@
       <workItem from="1709993837034" duration="750000" />
       <workItem from="1720541904114" duration="599000" />
       <workItem from="1723980143308" duration="3061000" />
-      <workItem from="1723985724043" duration="5330000" />
+      <workItem from="1723985724043" duration="5661000" />
+      <workItem from="1724007574631" duration="1869000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -555,15 +565,15 @@
       <option name="project" value="LOCAL" />
       <updated>1682098203324</updated>
     </task>
-    <task id="LOCAL-00055" summary="fix: infinite retries bug">
+    <task id="LOCAL-00056" summary="fix: retries counter reset">
       <option name="closed" value="true" />
-      <created>1723992079980</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
+      <created>1723993727890</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
       <option name="project" value="LOCAL" />
-      <updated>1723992079980</updated>
+      <updated>1723993727890</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -599,7 +609,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Fix code style" />
     <MESSAGE value="Rearrange structure" />
     <MESSAGE value="refactor: Rearrange project structure" />
     <MESSAGE value="refactor: rearrange project structure" />
@@ -624,19 +633,8 @@
     <MESSAGE value="fix: script functions error" />
     <MESSAGE value="fix: fix reconnect error &amp;&amp; added track interrupted embed &amp;&amp; improve stability" />
     <MESSAGE value="fix: infinite retries bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: infinite retries bug" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/whaly/events/client/interactionCreateEvent.ts</url>
-          <line>54</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="fix: retries counter reset" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: retries counter reset" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

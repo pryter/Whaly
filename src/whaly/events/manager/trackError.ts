@@ -17,8 +17,8 @@ export const registerTrackErrorEvent = (manager: Manager, client: Client) => {
     }
 
     if (retries < config.maxRetries) {
-      player.queue.add(track)
-      player.play(track)
+      player.queue.unshift(track)
+      await player.play(track)
       player.set("retries", retries + 1)
       player.set("retriedTrack", track.title)
 

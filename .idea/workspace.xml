@@ -8,14 +8,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="build: bump lavalink version &amp;&amp; erela.js">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/lavalink/Lavalink.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/lavalink/start.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/runtime.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime.ts" afterDir="false" />
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="build: remove unnecessary files">
+      <change beforePath="$PROJECT_DIR$/scripts/setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/setup.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,9 +78,9 @@
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" show_stripe_button="false" />
       <window_info id="Learn" show_stripe_button="false" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24639046" />
-      <window_info id="Commit" order="1" weight="0.24639046" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info id="Commit" order="0" weight="0.24639046" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24639046" />
+      <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" show_stripe_button="false" />
       <window_info anchor="bottom" id="Profiler" show_stripe_button="false" />
@@ -203,7 +197,7 @@
       <workItem from="1709992802872" duration="788000" />
       <workItem from="1709993837034" duration="750000" />
       <workItem from="1720541904114" duration="599000" />
-      <workItem from="1723980143308" duration="2556000" />
+      <workItem from="1723980143308" duration="2887000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -541,15 +535,15 @@
       <option name="project" value="LOCAL" />
       <updated>1682098203324</updated>
     </task>
-    <task id="LOCAL-00050" summary="build: bump lavalink version &amp;&amp; erela.js">
+    <task id="LOCAL-00052" summary="build: remove unnecessary files">
       <option name="closed" value="true" />
-      <created>1709995694859</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
+      <created>1723985282934</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
       <option name="project" value="LOCAL" />
-      <updated>1709995694859</updated>
+      <updated>1723985282934</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -585,8 +579,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Set status every 1 hour" />
-    <MESSAGE value="Improve bot stability" />
     <MESSAGE value="Update README.md" />
     <MESSAGE value="Update config" />
     <MESSAGE value="Add panel" />
@@ -610,7 +602,9 @@
     <MESSAGE value="fix: bump lavalink version" />
     <MESSAGE value="build: remove tailwindcss related deps" />
     <MESSAGE value="build: bump lavalink version &amp;&amp; erela.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="build: bump lavalink version &amp;&amp; erela.js" />
+    <MESSAGE value="build: update lavalink plugins &amp;&amp; setup script" />
+    <MESSAGE value="build: remove unnecessary files" />
+    <option name="LAST_COMMIT_MESSAGE" value="build: remove unnecessary files" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

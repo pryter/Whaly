@@ -10,16 +10,16 @@ import { config } from "../../../config"
 export const registerTrackErrorEvent = (manager: Manager, client: Client) => {
   manager.on("trackError", async (player, track, error) => {
     err(`Track error @ ${error.guildId}: ${error.error}`)
-    let retires: number | null | undefined = player.get("retries")
-    if (!retires) {
-      retires = 0
+    let retries: number | null | undefined = player.get("retries")
+    if (typeof retries !== "number") {
+      retries = 0
     }
 
-    if (retires < 3) {
+    if (retries < config.maxRetries) {
       player.queue.add(track)
       player.play(track)
-      player.set("retries", retires + 1)
-      warn(`Track retries count: ${retires + 1}`)
+      player.set("retries", retries + 1)
+      warn(`Track retries count: ${retries + 1}`)
       return
     }
 

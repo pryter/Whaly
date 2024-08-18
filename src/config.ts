@@ -1,6 +1,7 @@
 import { IntentsBitField } from "discord.js"
 
 export const config = {
+  maxRetries: 3,
   disconnectTime: 30 * 1000,
   selfDestroyMessageLifeSpan: 5 * 1000,
   reconnectEmbedLifeSpan: 60 * 1000,

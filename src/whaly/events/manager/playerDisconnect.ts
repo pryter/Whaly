@@ -1,5 +1,7 @@
+import { controllerStripDisabled } from "@main/elements/buttons/controllerStrip"
 import { reconnectButton } from "@main/elements/buttons/reconnect"
 import { disconnectEmbed } from "@main/elements/embeds/discconect"
+import { playerInterrupted } from "@main/elements/embeds/playerInterrupted"
 import { disconnectWithReconnectEmbed } from "@main/elements/embeds/reconnect"
 import { forcedDisconnectReason } from "@main/elements/texts"
 import { getChannel } from "@utils/cache"
@@ -8,9 +10,10 @@ import type {
   Client,
   Message,
   MessageCreateOptions,
+  MessageEditOptions,
   TextChannel
 } from "discord.js"
-import type { Manager } from "erela.js"
+import type { Manager, Track } from "erela.js"
 
 import { config } from "../../../config"
 
@@ -33,6 +36,19 @@ export const registerPlayerDisconnectEvent = (
         config.reconnectEmbedLifeSpan
       )
       player.set("reconnectMessage", reconnectMessage)
+
+      if (player.queue.current) {
+        const nowPlaying: Message | null | undefined = player.get("nowPlaying")
+
+        const contente = {
+          embeds: [playerInterrupted(<Track>player.queue.current)],
+          // @ts-ignore
+          components: [controllerStripDisabled(player)]
+        }
+
+        nowPlaying?.edit(<MessageEditOptions>contente)
+      }
+
       setTimeout(() => {
         const latestPlayer = manager.get(textChannel.guild.id)
         const recon: Message | null | undefined =

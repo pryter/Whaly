@@ -1,9 +1,11 @@
 import type { ButtonInteractionData } from "@itypes/interaction/ButtonInteractionData"
-import { createPlayer } from "@main/player/createPlayer"
+import { controllerStrip } from "@main/elements/buttons/controllerStrip"
+import { nowPlayingEmbed } from "@main/elements/embeds/nowPlaying"
 import { info } from "@utils/logger"
-import type { Message, VoiceChannel } from "discord.js"
+import type { Message, MessageEditOptions } from "discord.js"
+import type { Track } from "erela.js"
 
-export const handleReconnectEvent = (
+export const handleReconnectEvent = async (
   buttonInteractionData: ButtonInteractionData
 ) => {
   const { player, textChannel, voiceChannel, manager, guildId } =
@@ -16,26 +18,24 @@ export const handleReconnectEvent = (
   if (!voiceChannelId) {
     return
   }
-  const oldQueue = player.queue
 
-  player.destroy(true)
-  if (!voiceChannel) {
-    return
-  }
-  const newPlayer = createPlayer(
-    manager,
-    textChannel,
-    <VoiceChannel>voiceChannel
-  )
+  player.setVoiceChannel(voiceChannelId)
+  player.connect()
+  await player.pause(false)
 
-  if (oldQueue.current) {
-    newPlayer.queue.add(oldQueue.current)
-    newPlayer.queue.add(oldQueue.current)
+  if (player.queue.current) {
+    const embed = nowPlayingEmbed(<Track>player.queue.current)
+    const content = {
+      embeds: [embed],
+      // @ts-ignore
+      components: [controllerStrip(player)]
+    }
+
+    const nowPlaying: Message | null | undefined = player.get("nowPlaying")
+
+    nowPlaying?.edit(<MessageEditOptions>content)
   }
-  oldQueue.forEach((track) => {
-    newPlayer.queue.add(track)
-  })
-  newPlayer.connect()
+
   info(`Successfully swapped a player @ ${guildId}`)
 
   const reconMess: Message | null | undefined = player.get("reconnectMessage")

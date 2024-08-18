@@ -29,6 +29,8 @@ export const registerTrackStartEvent = (
 
     log(`player | Playing ${track.title} @ ${player.guild}`)
 
+    player.set("retries", 0)
+
     database?.collection("records").add({
       title: track.title,
       source: track.uri

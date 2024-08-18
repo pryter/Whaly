@@ -50,3 +50,38 @@ export const controllerStrip = (player: Player): ActionRowBuilder => {
     loopButton
   )
 }
+
+export const controllerStripDisabled = (): ActionRowBuilder => {
+  const createId = (id: string): string => {
+    return `dummy_strip_${id}`
+  }
+
+  // Create all buttons for the strip
+  const stopButton = new ButtonBuilder()
+    .setStyle(2)
+    .setCustomId(createId("stop_dummy"))
+    .setEmoji("⏹️")
+    .setDisabled(true)
+  const prevButton = new ButtonBuilder()
+    .setStyle(2)
+    .setCustomId(createId("prev_dummy"))
+    .setEmoji("⏮️")
+    .setDisabled(true)
+  const playPauseButton = new ButtonBuilder()
+    .setStyle(2)
+    .setCustomId(createId("playPause_dummy"))
+    .setEmoji("⏸️")
+    .setDisabled(true)
+  const nextButton = new ButtonBuilder()
+    .setStyle(2)
+    .setCustomId(createId("next_dummy"))
+    .setEmoji("⏭️")
+    .setDisabled(true)
+
+  return new ActionRowBuilder().setComponents(
+    stopButton,
+    prevButton,
+    playPauseButton,
+    nextButton
+  )
+}

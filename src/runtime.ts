@@ -20,8 +20,6 @@ import { config } from "./config"
 
 dotenv.config()
 
-// TODO Change lavalink client since erela.js is now deprecated.
-
 const runtime = () => {
   info("client | Starting bot client")
 

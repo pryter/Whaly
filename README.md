@@ -5,7 +5,7 @@
 
 Whaly is going to be free discord music bot soon.<br/>
 **Adopt one now!** (Beta)
-<code>https://whaly.pryter.me</code>
+<code>https://pryter.me/whaly</code>
 
 <h2>✨ Planned Features</h2>
 <img style="vertical-align:middle" src="https://progress-bar.dev/75/?scale=100&title=&nbsp;Progress&width=120&color=babaca"/>
@@ -24,7 +24,7 @@ Whaly is going to be free discord music bot soon.<br/>
 - [X] Global stats web page <br/>
 - [X] Internal web controller <br/>
 - [ ] Web Interface <br/>
-- [ ] Play TOP-50 and TOP-100 command <br/>
+- [X] Play TOP-50 and TOP-100 command <br/>
 
 <h2>🧂 Description</h2>
 Node v16.17<br/>

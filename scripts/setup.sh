@@ -2,13 +2,14 @@
 
 LAVALINK_VERSION="4.0.8"
 YT_PLUGIN_VERSION="1.8.3"
+LAVASRC_PLUGIN_VERSION="4.3.0"
 
 TEMPLATE="scripts/application_template.yml"
 createApplicationConfig() {
   printf 'Set a password for Lavalink server: '
   read -r answer
 
-  sed -e "s/YT_VER/${YT_PLUGIN_VERSION}/g" -e "s/_PASSWORD_/$answer/g" $TEMPLATE > application.yml
+  sed -e "s/SRC_VER/${LAVASRC_PLUGIN_VERSION}/g" -e "s/YT_VER/${YT_PLUGIN_VERSION}/g" -e "s/_PASSWORD_/$answer/g" $TEMPLATE > application.yml
 }
 
 downloadLavalink () {

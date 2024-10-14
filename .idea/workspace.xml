@@ -8,7 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="fix: duplicate player &amp;&amp; improve control strip stability">
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="build(deps): bump lavalink 4.0.8 and yt_plugin_version 1.8.3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/application_template.yml" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/application_template.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/setup.sh" afterDir="false" />
@@ -84,8 +84,8 @@
       <window_info id="Commit_Guest" show_stripe_button="false" />
       <window_info id="Pull Requests" show_stripe_button="false" />
       <window_info id="Learn" show_stripe_button="false" />
-      <window_info id="Commit" order="0" weight="0.24639046" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24639046" />
+      <window_info id="Commit" order="0" weight="0.2655587" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2655587" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" show_stripe_button="false" />
@@ -98,7 +98,7 @@
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Problems" order="1" />
       <window_info anchor="bottom" id="Problems View" order="2" weight="0.33045456" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.32970673" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.330518" />
       <window_info anchor="bottom" id="Services" order="4" />
       <window_info anchor="right" id="Endpoints" show_stripe_button="false" />
       <window_info anchor="right" id="Coverage" side_tool="true" />
@@ -221,7 +221,8 @@
       <workItem from="1723980143308" duration="3061000" />
       <workItem from="1723985724043" duration="5661000" />
       <workItem from="1724007574631" duration="2152000" />
-      <workItem from="1728828971992" duration="105000" />
+      <workItem from="1728828971992" duration="592000" />
+      <workItem from="1728907187955" duration="1739000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -559,15 +560,15 @@
       <option name="project" value="LOCAL" />
       <updated>1682098203324</updated>
     </task>
-    <task id="LOCAL-00057" summary="fix: duplicate player &amp;&amp; improve control strip stability">
+    <task id="LOCAL-00058" summary="build(deps): bump lavalink 4.0.8 and yt_plugin_version 1.8.3">
       <option name="closed" value="true" />
-      <created>1724010600123</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
+      <created>1728829272431</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
       <option name="project" value="LOCAL" />
-      <updated>1724010600123</updated>
+      <updated>1728829272431</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -603,7 +604,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="refactor: Rearrange project structure" />
     <MESSAGE value="refactor: rearrange project structure" />
     <MESSAGE value="fix: pause event's bug" />
     <MESSAGE value="feature: add scheduled indexing event" />
@@ -628,7 +628,8 @@
     <MESSAGE value="fix: infinite retries bug" />
     <MESSAGE value="fix: retries counter reset" />
     <MESSAGE value="fix: duplicate player &amp;&amp; improve control strip stability" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: duplicate player &amp;&amp; improve control strip stability" />
+    <MESSAGE value="build(deps): bump lavalink 4.0.8 and yt_plugin_version 1.8.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="build(deps): bump lavalink 4.0.8 and yt_plugin_version 1.8.3" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

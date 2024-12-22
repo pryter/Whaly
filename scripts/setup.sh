@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LAVALINK_VERSION="4.0.8"
-YT_PLUGIN_VERSION="1.8.3"
+YT_PLUGIN_VERSION="1.11.2"
 LAVASRC_PLUGIN_VERSION="4.3.0"
 
 TEMPLATE="scripts/application_template.yml"

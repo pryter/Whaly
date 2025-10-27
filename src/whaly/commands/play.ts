@@ -109,6 +109,7 @@ export const playCommand = (): Command => {
         case "track":
           {
             const track = <Track>response.tracks[0]
+
             player.queue.add(track)
             refreshQueueMessage(player, manager)
 

@@ -1,10 +1,10 @@
-import type { CommandInteraction } from "discord.js"
+import type { ChatInputCommandInteraction } from "discord.js"
 import type { Manager } from "erela.js"
 import type { Firestore } from "firebase-admin/firestore"
 
 export type Runtime = (
   manager: Manager,
-  interaction: CommandInteraction,
+  interaction: ChatInputCommandInteraction,
   database?: Firestore | null
 ) => Promise<any>
 export interface Command {

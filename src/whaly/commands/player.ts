@@ -6,7 +6,11 @@ import { noPlayingSongError } from "@main/elements/texts"
 import { getUserVoiceChannel } from "@utils/cache"
 import { warn } from "@utils/logger"
 import { sendSelfDestroyReply } from "@utils/message"
-import type { Message, MessageCreateOptions } from "discord.js"
+import type {
+  Message,
+  MessageCreateOptions,
+  SendableChannels
+} from "discord.js"
 import { SlashCommandBuilder } from "discord.js"
 import type { Track } from "erela.js"
 
@@ -19,7 +23,7 @@ export const playerCommand = (): Command => {
       .setName("player")
       .setDescription("Re-spawn existed player. In case you might lost it :/"),
     runtime: async (manager, interaction) => {
-      const textChannel = interaction.channel
+      const textChannel = interaction.channel as SendableChannels
       const voiceChannel = await getUserVoiceChannel(
         interaction.client,
         interaction

@@ -50,17 +50,16 @@ logging:
       max-history: 30
 plugins:
   youtube:
+    remoteCipher:
+      url: "https://cipher.kikkia.dev/"
+      userAgent: "whaly" # Optional
     enabled: true
     allowSearch: true
     allowDirectVideoIds: true
     allowDirectPlaylistIds: true
     clients:
-      - MUSIC
-      - TVHTML5EMBEDDED
-      - ANDROID_MUSIC
-      - ANDROID_TESTSUITE
       - WEB
-      - WEBEMBEDDED
+      - MWEB
   lavasrc:
     providers: # Custom providers for track loading. This is the default
       # - "dzisrc:%ISRC%" # Deezer ISRC provider

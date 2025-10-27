@@ -1,8 +1,8 @@
 #!/bin/bash
 
-LAVALINK_VERSION="4.0.8"
-YT_PLUGIN_VERSION="1.11.2"
-LAVASRC_PLUGIN_VERSION="4.3.0"
+LAVALINK_VERSION="4.1.1"
+YT_PLUGIN_VERSION="1.15.0"
+LAVASRC_PLUGIN_VERSION="4.8.1"
 
 TEMPLATE="scripts/application_template.yml"
 createApplicationConfig() {

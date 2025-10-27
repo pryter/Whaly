@@ -5,7 +5,12 @@ import { handleControllerStripEvent } from "@main/events/client/interactions/con
 import { handleReconnectEvent } from "@main/events/client/interactions/reconnect"
 import { getUserVoiceChannel } from "@utils/cache"
 import { warn } from "@utils/logger"
-import type { Client, TextChannel, VoiceChannel } from "discord.js"
+import type {
+  ChatInputCommandInteraction,
+  Client,
+  TextChannel,
+  VoiceChannel
+} from "discord.js"
 import type { Manager } from "erela.js"
 import type { Firestore } from "firebase-admin/firestore"
 
@@ -26,7 +31,7 @@ export const registerInteractionCreateEvent = (
       }
 
       const runtime = <Runtime>runtimeIndex[commandName]
-      runtime(manager, interaction, database)
+      runtime(manager, interaction as ChatInputCommandInteraction, database)
     }
 
     if (interaction.isButton()) {

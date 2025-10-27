@@ -12,6 +12,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/application_template.yml" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/application_template.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/setup.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/command/Command.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/command/Command.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/commands/play.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/play.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/commands/player.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/player.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/events/client/interactionCreateEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/client/interactionCreateEvent.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +32,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "pryter"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/pryter/Whaly.git",
+    "accountId": "0c418dc9-acaf-4ece-8823-2e05816bf153"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/node_modules/erela.js/dist/structures/Manager.d.ts" root0="SKIP_INSPECTION" />
   </component>
@@ -51,31 +67,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/peter/IdeaProjects/Whaly/src/whaly/elements/embeds&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/peter/Documents/Projects/Whaly/node_modules/prettier&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/peter/IdeaProjects/Whaly/node_modules/typescript/lib&quot;,
-    &quot;two.files.diff.last.used.file&quot;: &quot;/Users/peter/Documents/Projects/Whaly/package.json&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "code.cleanup.on.save": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/peter/IdeaProjects/Whaly/src/whaly/elements/embeds",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "/Users/peter/Documents/Projects/Whaly/node_modules/prettier",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
+    "ts.external.directory.path": "/Users/peter/IdeaProjects/Whaly/node_modules/typescript/lib",
+    "two.files.diff.last.used.file": "/Users/peter/Documents/Projects/Whaly/package.json",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
       <window_info id="Space Code Reviews" show_stripe_button="false" />
@@ -159,7 +176,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-78a6f59c" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.26830.84" />
       </set>
     </attachedChunks>
   </component>
@@ -223,6 +241,7 @@
       <workItem from="1724007574631" duration="2152000" />
       <workItem from="1728828971992" duration="592000" />
       <workItem from="1728907187955" duration="1739000" />
+      <workItem from="1761555914189" duration="2267000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>

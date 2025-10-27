@@ -8,14 +8,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="build(deps): bump lavalink 4.0.8 and yt_plugin_version 1.8.3">
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="build(deps): bump lavalink and plugins ++ added remote cipher">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/application_template.yml" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/application_template.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/setup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/setup.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/command/Command.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/command/Command.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/commands/play.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/play.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/commands/player.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/player.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/events/client/interactionCreateEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/client/interactionCreateEvent.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +71,7 @@
     "code.cleanup.on.save": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/peter/IdeaProjects/Whaly/src/whaly/elements/embeds",
+    "last_opened_file_path": "/Users/peter/IdeaProjects/Whaly/out",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -128,11 +123,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/out" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/whaly/elements/embeds" />
       <recent name="$PROJECT_DIR$/scripts" />
       <recent name="$PROJECT_DIR$/src/whaly/commands" />
-      <recent name="$PROJECT_DIR$/panel" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/service/lavalink" />
@@ -241,7 +236,7 @@
       <workItem from="1724007574631" duration="2152000" />
       <workItem from="1728828971992" duration="592000" />
       <workItem from="1728907187955" duration="1739000" />
-      <workItem from="1761555914189" duration="2267000" />
+      <workItem from="1761555914189" duration="3494000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -579,15 +574,15 @@
       <option name="project" value="LOCAL" />
       <updated>1682098203324</updated>
     </task>
-    <task id="LOCAL-00058" summary="build(deps): bump lavalink 4.0.8 and yt_plugin_version 1.8.3">
+    <task id="LOCAL-00059" summary="build(deps): bump lavalink and plugins ++ added remote cipher">
       <option name="closed" value="true" />
-      <created>1728829272431</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
+      <created>1761558223748</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
       <option name="project" value="LOCAL" />
-      <updated>1728829272431</updated>
+      <updated>1761558223748</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -623,7 +618,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="refactor: rearrange project structure" />
     <MESSAGE value="fix: pause event's bug" />
     <MESSAGE value="feature: add scheduled indexing event" />
     <MESSAGE value="feat: add scheduled indexing event" />
@@ -648,7 +642,8 @@
     <MESSAGE value="fix: retries counter reset" />
     <MESSAGE value="fix: duplicate player &amp;&amp; improve control strip stability" />
     <MESSAGE value="build(deps): bump lavalink 4.0.8 and yt_plugin_version 1.8.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="build(deps): bump lavalink 4.0.8 and yt_plugin_version 1.8.3" />
+    <MESSAGE value="build(deps): bump lavalink and plugins ++ added remote cipher" />
+    <option name="LAST_COMMIT_MESSAGE" value="build(deps): bump lavalink and plugins ++ added remote cipher" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

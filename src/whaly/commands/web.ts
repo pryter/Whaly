@@ -70,7 +70,6 @@ export const webCommand = (): Command => {
       //     })
       //   }
       // }
-      return null
     }
   }
 }

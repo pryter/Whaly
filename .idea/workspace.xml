@@ -8,71 +8,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="build: prebuild js">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/.eslintignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/.idea/discord.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/.idea/jsLinters/eslint.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/.idea/panel.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/.nvmrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/.prettierrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/__mocks__/next/router.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/commitlint.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/cypress.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/cypress/e2e/SeoMetadata.cy.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/cypress/e2e/navigation.cy.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/cypress/fixtures/example.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/cypress/support/e2e.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/cypress/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/jest.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/jest.setup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/lint-staged.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/netlify.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/next-env.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/next-sitemap.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/next.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/postcss.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/public/apple-touch-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/public/assets/images/nextjs-starter-banner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/public/favicon-16x16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/public/favicon-32x32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/src/pages/_app.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/src/pages/_document.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/src/pages/api/controls.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/src/pages/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/src/server/actions/getDetailAction.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/src/server/actions/restartAction.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/src/server/actions/stopAction.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/src/server/init.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/src/styles/global.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/src/utils/AppConfig.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/src/utils/dataFormatter.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/tailwind.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/runtime.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/command/Command.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/command/Command.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/commands/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/commands/play.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/play.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/events/client/interactionCreateEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/client/interactionCreateEvent.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/trackStart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/trackStart.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/whaly/player/createPlayer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/player/createPlayer.ts" afterDir="false" />
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="feat: added support for panel">
+      <change beforePath="$PROJECT_DIR$/src/whaly/commands/web.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/web.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -304,7 +241,7 @@
       <workItem from="1761578865636" duration="2000" />
       <workItem from="1761581018351" duration="1639000" />
       <workItem from="1761585831878" duration="10671000" />
-      <workItem from="1761666069865" duration="3738000" />
+      <workItem from="1761666069865" duration="3767000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -642,15 +579,15 @@
       <option name="project" value="LOCAL" />
       <updated>1682098203324</updated>
     </task>
-    <task id="LOCAL-00060" summary="build: prebuild js">
+    <task id="LOCAL-00061" summary="feat: added support for panel">
       <option name="closed" value="true" />
-      <created>1761559441863</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
+      <created>1761670751528</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
       <option name="project" value="LOCAL" />
-      <updated>1761559441863</updated>
+      <updated>1761670751528</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -686,7 +623,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="feature: add scheduled indexing event" />
     <MESSAGE value="feat: add scheduled indexing event" />
     <MESSAGE value="fix: exclude panel/ from main building source" />
     <MESSAGE value="fix: scheduled timer" />
@@ -711,7 +647,8 @@
     <MESSAGE value="build(deps): bump lavalink 4.0.8 and yt_plugin_version 1.8.3" />
     <MESSAGE value="build(deps): bump lavalink and plugins ++ added remote cipher" />
     <MESSAGE value="build: prebuild js" />
-    <option name="LAST_COMMIT_MESSAGE" value="build: prebuild js" />
+    <MESSAGE value="feat: added support for panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added support for panel" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

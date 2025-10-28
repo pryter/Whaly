@@ -6,6 +6,7 @@ export const createPlayer = (
   textChannel: TextChannel,
   voiceChannel: VoiceChannel
 ): Player => {
+  console.log(textChannel.guild.id)
   return manager.create({
     guild: textChannel.guild.id,
     voiceChannel: voiceChannel.id,

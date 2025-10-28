@@ -5,7 +5,8 @@ import type { Firestore } from "firebase-admin/firestore"
 export type Runtime = (
   manager: Manager,
   interaction: ChatInputCommandInteraction,
-  database?: Firestore | null
+  database?: Firestore | null,
+  subs?: any
 ) => Promise<any>
 export interface Command {
   name: string

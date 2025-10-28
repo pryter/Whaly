@@ -9,7 +9,7 @@ import { getUserVoiceChannel } from "@utils/cache"
 import { err, warn } from "@utils/logger"
 import type { Message, TextChannel, VoiceChannel } from "discord.js"
 import { EmbedBuilder, SlashCommandBuilder } from "discord.js"
-import type { Track } from "erela.js"
+import type { Player, Track } from "erela.js"
 
 export const playCommand = (): Command => {
   return {
@@ -25,7 +25,12 @@ export const playCommand = (): Command => {
           .setDescription("What am I looking for?")
           .setRequired(true)
       ),
-    runtime: async (manager, interaction) => {
+    runtime: async (
+      manager,
+      interaction,
+      _,
+      subs: Record<string, (player: Player) => void>
+    ) => {
       const textChannel = interaction.channel
       const voiceChannel = await getUserVoiceChannel(
         interaction.client,
@@ -160,6 +165,10 @@ export const playCommand = (): Command => {
           err("Invalid status")
       }
 
+      const sub = subs[voiceChannel.guild.id]
+      if (sub) {
+        sub(player)
+      }
       if (reply) setTimeout(() => reply.delete().catch(warn), 20000)
       return null
     }

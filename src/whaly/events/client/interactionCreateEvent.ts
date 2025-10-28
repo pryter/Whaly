@@ -17,7 +17,8 @@ import type { Firestore } from "firebase-admin/firestore"
 export const registerInteractionCreateEvent = (
   client: Client,
   manager: Manager,
-  database: Firestore | null
+  database: Firestore | null,
+  subs: any
 ) => {
   const runtimeIndex = buildRuntimeIndex()
 
@@ -31,7 +32,12 @@ export const registerInteractionCreateEvent = (
       }
 
       const runtime = <Runtime>runtimeIndex[commandName]
-      runtime(manager, interaction as ChatInputCommandInteraction, database)
+      runtime(
+        manager,
+        interaction as ChatInputCommandInteraction,
+        database,
+        subs
+      )
     }
 
     if (interaction.isButton()) {

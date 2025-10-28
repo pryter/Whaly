@@ -8,9 +8,71 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="build(deps): bump lavalink and plugins ++ added remote cipher">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="build: prebuild js">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/.idea/discord.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/.idea/jsLinters/eslint.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/.idea/panel.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/.nvmrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/__mocks__/next/router.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/commitlint.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/cypress.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/cypress/e2e/SeoMetadata.cy.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/cypress/e2e/navigation.cy.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/cypress/fixtures/example.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/cypress/support/e2e.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/cypress/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/jest.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/jest.setup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/lint-staged.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/netlify.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/next-env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/next-sitemap.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/next.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/public/apple-touch-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/public/assets/images/nextjs-starter-banner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/public/favicon-16x16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/public/favicon-32x32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/src/pages/_app.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/src/pages/_document.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/src/pages/api/controls.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/src/pages/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/src/server/actions/getDetailAction.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/src/server/actions/restartAction.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/src/server/actions/stopAction.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/src/server/init.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/src/styles/global.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/src/utils/AppConfig.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/src/utils/dataFormatter.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/tailwind.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runtime.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/command/Command.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/command/Command.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/commands/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/commands/play.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/play.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/events/client/interactionCreateEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/client/interactionCreateEvent.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/trackStart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/trackStart.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/player/createPlayer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/player/createPlayer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,18 +89,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "pryter"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;pryter&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/pryter/Whaly.git",
-    "accountId": "0c418dc9-acaf-4ece-8823-2e05816bf153"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/pryter/Whaly.git&quot;,
+    &quot;accountId&quot;: &quot;0c418dc9-acaf-4ece-8823-2e05816bf153&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/node_modules/erela.js/dist/structures/Manager.d.ts" root0="SKIP_INSPECTION" />
   </component>
@@ -62,32 +124,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "code.cleanup.on.save": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/peter/IdeaProjects/Whaly/out",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "prettierjs.PrettierConfiguration.Package": "/Users/peter/Documents/Projects/Whaly/node_modules/prettier",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
-    "ts.external.directory.path": "/Users/peter/IdeaProjects/Whaly/node_modules/typescript/lib",
-    "two.files.diff.last.used.file": "/Users/peter/Documents/Projects/Whaly/package.json",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/peter/IdeaProjects/Whaly/src/whaly/commands&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/peter/Documents/Projects/Whaly/node_modules/prettier&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/peter/IdeaProjects/Whaly/node_modules/typescript/lib&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;/Users/peter/Documents/Projects/Whaly/package.json&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
     <layout>
       <window_info id="Space Code Reviews" show_stripe_button="false" />
@@ -123,11 +185,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/whaly/commands" />
       <recent name="$PROJECT_DIR$/out" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/whaly/elements/embeds" />
       <recent name="$PROJECT_DIR$/scripts" />
-      <recent name="$PROJECT_DIR$/src/whaly/commands" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/service/lavalink" />
@@ -236,7 +298,13 @@
       <workItem from="1724007574631" duration="2152000" />
       <workItem from="1728828971992" duration="592000" />
       <workItem from="1728907187955" duration="1739000" />
-      <workItem from="1761555914189" duration="3494000" />
+      <workItem from="1761555914189" duration="4109000" />
+      <workItem from="1761560497147" duration="3865000" />
+      <workItem from="1761564598803" duration="21000" />
+      <workItem from="1761578865636" duration="2000" />
+      <workItem from="1761581018351" duration="1639000" />
+      <workItem from="1761585831878" duration="10671000" />
+      <workItem from="1761666069865" duration="3738000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -574,15 +642,15 @@
       <option name="project" value="LOCAL" />
       <updated>1682098203324</updated>
     </task>
-    <task id="LOCAL-00059" summary="build(deps): bump lavalink and plugins ++ added remote cipher">
+    <task id="LOCAL-00060" summary="build: prebuild js">
       <option name="closed" value="true" />
-      <created>1761558223748</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
+      <created>1761559441863</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
       <option name="project" value="LOCAL" />
-      <updated>1761558223748</updated>
+      <updated>1761559441863</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -618,7 +686,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="fix: pause event's bug" />
     <MESSAGE value="feature: add scheduled indexing event" />
     <MESSAGE value="feat: add scheduled indexing event" />
     <MESSAGE value="fix: exclude panel/ from main building source" />
@@ -643,7 +710,8 @@
     <MESSAGE value="fix: duplicate player &amp;&amp; improve control strip stability" />
     <MESSAGE value="build(deps): bump lavalink 4.0.8 and yt_plugin_version 1.8.3" />
     <MESSAGE value="build(deps): bump lavalink and plugins ++ added remote cipher" />
-    <option name="LAST_COMMIT_MESSAGE" value="build(deps): bump lavalink and plugins ++ added remote cipher" />
+    <MESSAGE value="build: prebuild js" />
+    <option name="LAST_COMMIT_MESSAGE" value="build: prebuild js" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

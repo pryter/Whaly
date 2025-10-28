@@ -11,12 +11,13 @@ import type {
   MessageEditOptions,
   TextChannel
 } from "discord.js"
-import type { Manager } from "erela.js"
+import type { Manager, Player } from "erela.js"
 
 export const registerTrackStartEvent = (
   manager: Manager,
   client: Client,
-  database: Database
+  database: Database,
+  trackSub: Record<string, (player: Player) => void>
 ) => {
   manager.on("trackStart", async (player, track) => {
     const embed = nowPlayingEmbed(track)
@@ -28,6 +29,13 @@ export const registerTrackStartEvent = (
     }
 
     log(`player | Playing ${track.title} @ ${player.guild}`)
+
+    if (textChannel.guild.id) {
+      const sub = trackSub[textChannel.guild.id]
+      if (sub) {
+        sub(player)
+      }
+    }
 
     database?.collection("records").add({
       title: track.title,

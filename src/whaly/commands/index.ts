@@ -5,6 +5,7 @@ import { playerCommand } from "@main/commands/player"
 import { playTop50 } from "@main/commands/playtop50"
 import { queueCommand } from "@main/commands/queue"
 import { skipCommand } from "@main/commands/skip"
+import { webCommand } from "@main/commands/web"
 
 const allCommands: Command[] = [
   playCommand(),
@@ -12,7 +13,8 @@ const allCommands: Command[] = [
   skipCommand(),
   queueCommand(),
   playerCommand(),
-  playTop50()
+  playTop50(),
+  webCommand()
 ]
 
 export const getAllCommandData = (): Command[] => {

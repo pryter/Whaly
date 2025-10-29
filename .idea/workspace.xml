@@ -8,8 +8,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="feat: added support for panel">
-      <change beforePath="$PROJECT_DIR$/src/whaly/commands/web.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/web.ts" afterDir="false" />
+    <list default="true" id="b254487a-6115-4730-8375-f00bd6654771" name="Changes" comment="fix: build error">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/runtime.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/runtime.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/command/Command.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/command/Command.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/commands/play.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/play.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/commands/playtop50.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/commands/playtop50.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/events/client/interactionCreateEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/client/interactionCreateEvent.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/playerDestroy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/playerDestroy.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/playerDisconnect.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/playerDisconnect.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/queueEnd.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/queueEnd.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/trackError.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/trackError.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/events/manager/trackStart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/manager/trackStart.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/whaly/events/rest/rest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/whaly/events/rest/rest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +255,8 @@
       <workItem from="1761578865636" duration="2000" />
       <workItem from="1761581018351" duration="1639000" />
       <workItem from="1761585831878" duration="10671000" />
-      <workItem from="1761666069865" duration="3767000" />
+      <workItem from="1761666069865" duration="5910000" />
+      <workItem from="1761731843713" duration="13184000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1667386779375</created>
@@ -579,15 +594,15 @@
       <option name="project" value="LOCAL" />
       <updated>1682098203324</updated>
     </task>
-    <task id="LOCAL-00061" summary="feat: added support for panel">
+    <task id="LOCAL-00062" summary="fix: build error">
       <option name="closed" value="true" />
-      <created>1761670751528</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
+      <created>1761670775014</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
       <option name="project" value="LOCAL" />
-      <updated>1761670751528</updated>
+      <updated>1761670775014</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -623,7 +638,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="feat: add scheduled indexing event" />
     <MESSAGE value="fix: exclude panel/ from main building source" />
     <MESSAGE value="fix: scheduled timer" />
     <MESSAGE value="fix: index algorithm" />
@@ -648,7 +662,8 @@
     <MESSAGE value="build(deps): bump lavalink and plugins ++ added remote cipher" />
     <MESSAGE value="build: prebuild js" />
     <MESSAGE value="feat: added support for panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: added support for panel" />
+    <MESSAGE value="fix: build error" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: build error" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

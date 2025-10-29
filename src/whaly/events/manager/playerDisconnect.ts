@@ -4,6 +4,7 @@ import { disconnectEmbed } from "@main/elements/embeds/discconect"
 import { playerInterrupted } from "@main/elements/embeds/playerInterrupted"
 import { disconnectWithReconnectEmbed } from "@main/elements/embeds/reconnect"
 import { forcedDisconnectReason } from "@main/elements/texts"
+import type { Bus } from "@main/events/eventbus"
 import { getChannel } from "@utils/cache"
 import { sendSelfDestroyMessage } from "@utils/message"
 import type {
@@ -13,13 +14,14 @@ import type {
   MessageEditOptions,
   TextChannel
 } from "discord.js"
-import type { Manager, Track } from "erela.js"
+import type { Manager, Player, Track } from "erela.js"
 
 import { config } from "../../../config"
 
 export const registerPlayerDisconnectEvent = (
   manager: Manager,
-  client: Client
+  client: Client,
+  pbus: Bus<Player>
 ) => {
   manager.on("playerDisconnect", async (player) => {
     const textChannel = <TextChannel>getChannel(client, player.textChannel)
@@ -66,5 +68,7 @@ export const registerPlayerDisconnectEvent = (
       )
       player.destroy()
     }
+
+    pbus.post(textChannel.guild.id, player)
   })
 }

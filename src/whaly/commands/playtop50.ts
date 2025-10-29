@@ -46,7 +46,7 @@ export const playTop50 = (): Command => {
           warn(`whaly | can't delete reconnect message`)
         })
         player.set("reconnectMessage", null)
-        return playTop50().runtime(manager, interaction)
+        return playTop50().runtime(manager, interaction, database)
       }
 
       const reply = await interaction.reply({

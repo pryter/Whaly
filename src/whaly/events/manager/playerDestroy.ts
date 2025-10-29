@@ -1,9 +1,14 @@
+import type { Bus } from "@main/events/eventbus"
 import { err } from "@utils/logger"
 import type { Message } from "discord.js"
-import type { Manager } from "erela.js"
+import type { Manager, Player } from "erela.js"
 
-export const registerPlayerDestroyEvent = (manager: Manager) => {
+export const registerPlayerDestroyEvent = (
+  manager: Manager,
+  pbus: Bus<Player>
+) => {
   manager.on("playerDestroy", (player) => {
+    pbus.post(player.guild, player)
     const nowPlaying: Message | null | undefined = player.get("nowPlaying")
     if (nowPlaying) {
       nowPlaying.delete().catch(() => {

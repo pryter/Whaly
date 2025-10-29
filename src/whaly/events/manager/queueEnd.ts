@@ -3,6 +3,7 @@ import { disconnectEmbed } from "@main/elements/embeds/discconect"
 import { playerInterrupted } from "@main/elements/embeds/playerInterrupted"
 import { queueEndEmbed } from "@main/elements/embeds/queueEnd"
 import { inactivityDisconnectReason } from "@main/elements/texts"
+import type { Bus } from "@main/events/eventbus"
 import { getChannel } from "@utils/cache"
 import { sendSelfDestroyMessage } from "@utils/message"
 import type {
@@ -11,14 +12,19 @@ import type {
   MessageEditOptions,
   TextChannel
 } from "discord.js"
-import type { Manager } from "erela.js"
+import type { Manager, Player } from "erela.js"
 
 import { config } from "../../../config"
 
-export const registerQueueEndEvent = (manager: Manager, client: Client) => {
+export const registerQueueEndEvent = (
+  manager: Manager,
+  client: Client,
+  pbus: Bus<Player>
+) => {
   manager.on("queueEnd", async (player) => {
     const textChannel = <TextChannel>getChannel(client, player.textChannel)
 
+    pbus.post(textChannel.guild.id, player)
     // If got forced disconnected
     if (!player.queue.previous) {
       return

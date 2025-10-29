@@ -1,16 +1,12 @@
 import * as http from "node:http"
 
-import { addedToQueueEmbed } from "@main/elements/embeds/addedToQueue"
-import { refreshQueueMessage } from "@main/elements/message/queue"
-import { err } from "@utils/logger"
-import type { Manager, Player, Track } from "erela.js"
+import type { Bus } from "@main/events/eventbus"
+import { handleEndpoints } from "@main/events/rest/endpoints"
+import type { Manager, Player } from "erela.js"
 import express from "express"
 import { WebSocketServer } from "ws"
 
-export const startRest = (
-  manager: Manager,
-  tracksub: Record<string, (player: Player) => void>
-) => {
+export const startRest = (manager: Manager, pBus: Bus<Player>) => {
   const app = express()
   const server = http.createServer(app)
   const wss = new WebSocketServer({ server })
@@ -22,27 +18,37 @@ export const startRest = (
       client.close()
       return
     }
-    // eslint-disable-next-line no-param-reassign
-    tracksub[gid] = (player) => {
+
+    const bid = pBus.subscribe((p) => {
       const data = {
-        queue: player.queue,
-        current: player.queue.current
+        queue: p.queue,
+        current: p.queue.current,
+        disconnected: !!p?.get("reconnectMessage"),
+        state: p.state,
+        isPlaying: p.playing,
+        position: p.position
       }
 
       client.send(JSON.stringify(data))
-    }
+    }, gid)
 
     client.on("close", () => {
-      if (tracksub[gid]) {
-        // eslint-disable-next-line no-param-reassign
-        delete tracksub[gid]
-      }
+      pBus.unsubscribe(bid)
     })
 
-    const player = manager.get(gid)
+    const p = manager.get(gid)
+    if (!p) {
+      client.close()
+      return
+    }
+
     const data = {
-      queue: player?.queue,
-      current: player?.queue.current
+      queue: p.queue,
+      current: p.queue.current,
+      disconnected: !!p?.get("reconnectMessage"),
+      state: p?.state,
+      isPlaying: p?.playing,
+      position: p?.position
     }
     client.send(JSON.stringify(data))
   })
@@ -51,91 +57,7 @@ export const startRest = (
 
   app.use(express.json())
 
-  app.post("/player/:gid/track", async (req, res) => {
-    const { gid } = req.params
-    if (!gid) return res.status(400).json({ error: "guild id missing" })
-    const player = manager.players.get(gid)
-    if (!player) return res.status(400).json({ error: "no player found" })
-    const data = req.body as { type: string }
-    const { type } = data
-    switch (type) {
-      case "skip": {
-        player.queue.previous = player.queue.current
-        player.stop()
-        break
-      }
-      default:
-        break
-    }
-    return res.status(400).json({ error: "guild id missing" })
-  })
-
-  app.post("/play/:gid/:query", async (req, res) => {
-    const { gid, query } = req.params
-    if (!gid || !query)
-      return res.status(400).json({ error: "guild id missing" })
-    const player = manager.players.get(gid)
-    if (!player) return res.status(400).json({ error: "no player found" })
-    const response = await player.search(query).catch((e) => {
-      err(`Command Play Remote| ${e}`)
-    })
-
-    if (!response) return res.status(400).json({ error: "no player found" })
-
-    switch (response.loadType) {
-      case "empty":
-        if (!player.queue.current) {
-          player.destroy()
-        }
-        return res.status(200).json({ status: "empty" })
-      case "search":
-      case "track": {
-        const track = <Track>response.tracks[0]
-
-        player.queue.add(track)
-        refreshQueueMessage(player, manager)
-
-        if (!player.playing && !player.paused && !player.queue.size) {
-          player.play()
-        }
-
-        const addToQueueEmbed = addedToQueueEmbed(track)
-
-        if (player.queue.totalSize > 1) {
-          addToQueueEmbed.addFields({
-            name: "Position in the queue",
-            value: `${player.queue.size}`,
-            inline: true
-          })
-        } else {
-          player.queue.previous = player.queue.current
-        }
-        break
-      }
-      case "playlist": {
-        player.queue.add(response.tracks)
-        refreshQueueMessage(player, manager)
-
-        if (
-          !player.playing &&
-          !player.paused &&
-          player.queue.totalSize === response.tracks.length
-        ) {
-          player.play()
-        }
-        break
-      }
-      default:
-        err("Invalid status")
-    }
-
-    const sub = tracksub[gid]
-    if (sub) {
-      sub(player)
-    }
-
-    return res.status(200).json({ status: "success" })
-  })
+  handleEndpoints(app, manager, pBus)
   // Start server
   const PORT = 3223
   app.listen(PORT, () => console.log(`REST Service on ${PORT}`))

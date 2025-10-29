@@ -4,6 +4,7 @@ import { commandErrorEmbed } from "@main/elements/embeds/commandError"
 import { playlistAddedToQueueEmbed } from "@main/elements/embeds/playlistAddedToQueue"
 import { refreshQueueMessage } from "@main/elements/message/queue"
 import { searchingError } from "@main/elements/texts"
+import type { Bus } from "@main/events/eventbus"
 import { createPlayer } from "@main/player/createPlayer"
 import { getUserVoiceChannel } from "@utils/cache"
 import { err, warn } from "@utils/logger"
@@ -29,7 +30,7 @@ export const playCommand = (): Command => {
       manager,
       interaction,
       _,
-      subs: Record<string, (player: Player) => void>
+      eventBus: Bus<Player> | undefined
     ) => {
       const textChannel = interaction.channel
       const voiceChannel = await getUserVoiceChannel(
@@ -57,11 +58,11 @@ export const playCommand = (): Command => {
       if (player.get("reconnectMessage")) {
         player.destroy()
         const reconnectMess: Message | null = player.get("reconnectMessage")
-        reconnectMess?.delete().catch((_) => {
+        reconnectMess?.delete().catch((__) => {
           warn(`whaly | can't delete reconnect message`)
         })
         player.set("reconnectMessage", null)
-        return playCommand().runtime(manager, interaction)
+        return playCommand().runtime(manager, interaction, _, eventBus)
       }
 
       const reply = await interaction.reply({
@@ -165,10 +166,8 @@ export const playCommand = (): Command => {
           err("Invalid status")
       }
 
-      const sub = subs[voiceChannel.guild.id]
-      if (sub) {
-        sub(player)
-      }
+      eventBus?.post(voiceChannel.guild.id, player)
+
       if (reply) setTimeout(() => reply.delete().catch(warn), 20000)
       return null
     }

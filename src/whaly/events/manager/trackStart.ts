@@ -2,6 +2,7 @@ import type { Database } from "@itypes/database/Database"
 import { controllerStrip } from "@main/elements/buttons/controllerStrip"
 import { nowPlayingEmbed } from "@main/elements/embeds/nowPlaying"
 import { refreshQueueMessage } from "@main/elements/message/queue"
+import type { Bus } from "@main/events/eventbus"
 import { getChannel } from "@utils/cache"
 import { log } from "@utils/logger"
 import type {
@@ -11,30 +12,36 @@ import type {
   MessageEditOptions,
   TextChannel
 } from "discord.js"
+import { ActionRowBuilder, ButtonBuilder, ButtonStyle } from "discord.js"
 import type { Manager, Player } from "erela.js"
 
 export const registerTrackStartEvent = (
   manager: Manager,
   client: Client,
   database: Database,
-  trackSub: Record<string, (player: Player) => void>
+  pBus: Bus<Player>
 ) => {
   manager.on("trackStart", async (player, track) => {
     const embed = nowPlayingEmbed(track)
     const textChannel = <TextChannel>getChannel(client, player.textChannel)
+
+    const row = new ActionRowBuilder().addComponents(
+      new ButtonBuilder()
+        .setLabel("🕹 Try new controller!")
+        .setURL(`https://whaly.pryter.me/remote/${player.guild}`)
+        .setStyle(ButtonStyle.Link)
+    )
+
     const content = {
       embeds: [embed],
       // @ts-ignore
-      components: [controllerStrip(player)]
+      components: [controllerStrip(player), row]
     }
 
     log(`player | Playing ${track.title} @ ${player.guild}`)
 
     if (textChannel.guild.id) {
-      const sub = trackSub[textChannel.guild.id]
-      if (sub) {
-        sub(player)
-      }
+      pBus.post(textChannel.guild.id, player)
     }
 
     database?.collection("records").add({

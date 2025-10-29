@@ -3,6 +3,7 @@ import { registerInteractionCreateEvent } from "@main/events/client/interactionC
 import { registerRawEvent } from "@main/events/client/rawEvent"
 import { registerReadyEvent } from "@main/events/client/readyEvent"
 import { registerVoiceStateUpdateEvent } from "@main/events/client/voiceStateUpdateEvent"
+import { createBus } from "@main/events/eventbus"
 import { registerPlayerDestroyEvent } from "@main/events/manager/playerDestroy"
 import { registerPlayerDisconnectEvent } from "@main/events/manager/playerDisconnect"
 import { registerPlayerMoveEvent } from "@main/events/manager/playerMove"
@@ -22,7 +23,7 @@ import { config } from "./config"
 
 dotenv.config()
 
-const tracksub: Record<string, (player: Player) => void> = {}
+const playerEventBus = createBus<Player>()
 
 const runtime = () => {
   info("client | Starting bot client")
@@ -38,23 +39,23 @@ const runtime = () => {
   registerScheduledIndexRecordsEvent(database, client)
 
   // Register manager events
-  registerTrackStartEvent(manager, client, database, tracksub)
-  registerQueueEndEvent(manager, client)
-  registerTrackErrorEvent(manager, client)
+  registerTrackStartEvent(manager, client, database, playerEventBus)
+  registerQueueEndEvent(manager, client, playerEventBus)
+  registerTrackErrorEvent(manager, client, playerEventBus)
   registerPlayerMoveEvent(manager, client)
-  registerPlayerDestroyEvent(manager)
-  registerPlayerDisconnectEvent(manager, client)
+  registerPlayerDestroyEvent(manager, playerEventBus)
+  registerPlayerDisconnectEvent(manager, client, playerEventBus)
 
   // Register client events
   registerReadyEvent(client, manager)
   registerRawEvent(client, manager)
 
-  registerInteractionCreateEvent(client, manager, database, tracksub)
+  registerInteractionCreateEvent(client, manager, database, playerEventBus)
   registerVoiceStateUpdateEvent(client, manager)
 
   registerDebugEvent(client)
 
-  startRest(manager, tracksub)
+  startRest(manager, playerEventBus)
   client.login(process.env.TOKEN)
 }
 

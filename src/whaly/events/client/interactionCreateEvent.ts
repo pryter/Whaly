@@ -3,6 +3,7 @@ import type { ButtonInteractionData } from "@itypes/interaction/ButtonInteractio
 import { buildRuntimeIndex } from "@main/commands"
 import { handleControllerStripEvent } from "@main/events/client/interactions/controllerStrip"
 import { handleReconnectEvent } from "@main/events/client/interactions/reconnect"
+import type { Bus } from "@main/events/eventbus"
 import { getUserVoiceChannel } from "@utils/cache"
 import { warn } from "@utils/logger"
 import type {
@@ -11,14 +12,14 @@ import type {
   TextChannel,
   VoiceChannel
 } from "discord.js"
-import type { Manager } from "erela.js"
+import type { Manager, Player } from "erela.js"
 import type { Firestore } from "firebase-admin/firestore"
 
 export const registerInteractionCreateEvent = (
   client: Client,
   manager: Manager,
   database: Firestore | null,
-  subs: any
+  pBus: Bus<Player>
 ) => {
   const runtimeIndex = buildRuntimeIndex()
 
@@ -36,7 +37,7 @@ export const registerInteractionCreateEvent = (
         manager,
         interaction as ChatInputCommandInteraction,
         database,
-        subs
+        pBus
       )
     }
 

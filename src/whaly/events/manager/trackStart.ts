@@ -1,5 +1,8 @@
 import type { Database } from "@itypes/database/Database"
-import { controllerStrip } from "@main/elements/buttons/controllerStrip"
+import {
+  controllerStrip,
+  newControllerButtonStrip
+} from "@main/elements/buttons/controllerStrip"
 import { nowPlayingEmbed } from "@main/elements/embeds/nowPlaying"
 import { refreshQueueMessage } from "@main/elements/message/queue"
 import type { Bus } from "@main/events/eventbus"
@@ -12,7 +15,6 @@ import type {
   MessageEditOptions,
   TextChannel
 } from "discord.js"
-import { ActionRowBuilder, ButtonBuilder, ButtonStyle } from "discord.js"
 import type { Manager, Player } from "erela.js"
 
 export const registerTrackStartEvent = (
@@ -25,17 +27,13 @@ export const registerTrackStartEvent = (
     const embed = nowPlayingEmbed(track)
     const textChannel = <TextChannel>getChannel(client, player.textChannel)
 
-    const row = new ActionRowBuilder().addComponents(
-      new ButtonBuilder()
-        .setLabel("🕹 Try new controller!")
-        .setURL(`https://whaly.pryter.me/remote/${player.guild}`)
-        .setStyle(ButtonStyle.Link)
-    )
-
     const content = {
       embeds: [embed],
       // @ts-ignore
-      components: [controllerStrip(player), row]
+      components: [
+        controllerStrip(player),
+        newControllerButtonStrip(player.guild)
+      ]
     }
 
     log(`player | Playing ${track.title} @ ${player.guild}`)

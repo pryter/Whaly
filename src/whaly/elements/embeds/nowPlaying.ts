@@ -15,7 +15,11 @@ export const nowPlayingEmbed = (track: Track) => {
     .addFields(
       {
         name: "Requested by",
-        value: `${track.requester}`,
+        value: `${
+          Object.keys(track.requester || {}).length > 0
+            ? track.requester
+            : "remote"
+        }`,
         inline: true
       },
       {

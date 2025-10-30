@@ -1,4 +1,7 @@
-import { controllerStripDisabled } from "@main/elements/buttons/controllerStrip"
+import {
+  controllerStripDisabled,
+  newControllerButtonStrip
+} from "@main/elements/buttons/controllerStrip"
 import { disconnectEmbed } from "@main/elements/embeds/discconect"
 import { playerInterrupted } from "@main/elements/embeds/playerInterrupted"
 import { queueEndEmbed } from "@main/elements/embeds/queueEnd"
@@ -40,8 +43,10 @@ export const registerQueueEndEvent = (
 
     const contente = {
       embeds: [playerInterrupted(null)],
-      // @ts-ignore
-      components: [controllerStripDisabled(player)]
+      components: [
+        controllerStripDisabled(),
+        newControllerButtonStrip(player.guild)
+      ]
     }
 
     nowPlaying?.edit(<MessageEditOptions>contente)

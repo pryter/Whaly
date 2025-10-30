@@ -12,7 +12,7 @@
     "deploy": "ts-node src/scripts/deployCommand.ts",
     "ranking": "ts-node src/scripts/ranking.ts",
     "check-types": "tsc --noEmit --pretty && tsc --project cypress --noEmit --pretty",
-    "lavalink": "java -jar ./lavalink/Lavalink.jar",
+    "lavalink": "source .env && java -jar ./lavalink/Lavalink.jar",
     "setup": "sh ./scripts/setup.sh"
   },
   "license": "MIT",

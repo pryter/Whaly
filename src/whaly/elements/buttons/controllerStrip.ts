@@ -1,4 +1,4 @@
-import { ActionRowBuilder, ButtonBuilder } from "discord.js"
+import { ActionRowBuilder, ButtonBuilder, ButtonStyle } from "discord.js"
 import type { Player } from "erela.js"
 
 const getLoopButtonAttribute = (
@@ -11,6 +11,16 @@ const getLoopButtonAttribute = (
   return [3, "🔂"]
 }
 
+export const newControllerButtonStrip = (gid: string) => {
+  const row = new ActionRowBuilder().addComponents(
+    new ButtonBuilder()
+      .setLabel("🕹 Try new controller!")
+      .setURL(`https://whaly.pryter.me/remote/${gid}`)
+      .setStyle(ButtonStyle.Link)
+  )
+
+  return row
+}
 export const controllerStrip = (player: Player): ActionRowBuilder => {
   const createId = (id: string): string => {
     return `controllerStrip_${player.guild}_${id}`

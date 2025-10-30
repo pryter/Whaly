@@ -12,7 +12,7 @@ export const handleEndpoints = (
 ) => {
   const trackMempool = new Map<
     string,
-    { track: Record<string, Track>; gid: string }
+    { track: Record<string, Track | Track[]>; gid: string }
   >()
 
   // track action
@@ -101,8 +101,10 @@ export const handleEndpoints = (
     return res.status(200).json({ status: "success" })
   })
   // query
-  app.post("/play/:gid/:query", async (req, res) => {
-    const { gid, query } = req.params
+  app.post("/play/:gid", async (req, res) => {
+    const { gid } = req.params
+    const data = req.body as { query: string }
+    const { query } = data
     if (!gid || !query)
       return res.status(400).json({ error: "guild id missing" })
     const player = manager.players.get(gid)
@@ -132,21 +134,24 @@ export const handleEndpoints = (
 
         return res.status(200).json({
           status: "success",
-          data: { options: response.tracks, sessionId }
+          data: { type: "options", options: response.tracks, sessionId }
         })
       }
       case "playlist": {
-        player.queue.add(response.tracks)
-        refreshQueueMessage(player, manager)
-
-        if (
-          !player.playing &&
-          !player.paused &&
-          player.queue.totalSize === response.tracks.length
-        ) {
-          player.play()
-        }
-        break
+        const sessionId = v4()
+        trackMempool.set(sessionId, {
+          track: { [sessionId]: response.tracks },
+          gid
+        })
+        return res.status(200).json({
+          status: "success",
+          data: {
+            type: "playlist",
+            options: response.tracks,
+            sessionId,
+            playlist_info: response.playlist
+          }
+        })
       }
       default:
         err("Invalid status")

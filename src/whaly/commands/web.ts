@@ -1,75 +1,84 @@
 import type { Command } from "@itypes/command/Command"
+import { newControllerButtonStrip } from "@main/elements/buttons/controllerStrip"
 import { commandResponseEmbed } from "@main/elements/embeds/commandResponse"
-import { noPlayingSongError } from "@main/elements/texts"
+import { disconnectEmbed } from "@main/elements/embeds/discconect"
+import { inactivityDisconnectReason } from "@main/elements/texts"
+import { createPlayer } from "@main/player/createPlayer"
 import { getUserVoiceChannel } from "@utils/cache"
-import { sendSelfDestroyReply } from "@utils/message"
+import { sendSelfDestroyMessage } from "@utils/message"
+import type {
+  ActionRowBuilder,
+  ButtonBuilder,
+  TextChannel,
+  VoiceChannel
+} from "discord.js"
 import { SlashCommandBuilder } from "discord.js"
 
 import { config } from "../../config"
 
 export const webCommand = (): Command => {
   return {
-    name: "web",
+    name: "summon",
     data: new SlashCommandBuilder()
-      .setName("web")
-      .setDescription("Get web url"),
+      .setName("summon")
+      .setDescription("Just summon the bot to your voice channel."),
     runtime: async (manager, interaction, database) => {
-      const textChannel = interaction.channel
+      const textChannel = interaction.channel as TextChannel
       const voiceChannel = await getUserVoiceChannel(
         interaction.client,
         interaction
       )
-      if (!voiceChannel || !textChannel || !interaction.guild) {
-        return
+
+      if (!voiceChannel || !textChannel) {
+        return null
       }
-
-      const player = manager.players.get(interaction.guild.id)
-
-      if (!player) {
-        sendSelfDestroyReply(
-          interaction,
-          { embeds: [commandResponseEmbed(noPlayingSongError)] },
-          config.selfDestroyMessageLifeSpan
-        )
-        return
+      if (textChannel.isDMBased()) {
+        return null
       }
-      const guildId = voiceChannel.guild.id
-
-      sendSelfDestroyReply(
-        interaction,
-        {
-          embeds: [
-            commandResponseEmbed(`https://whaly.pryter.me/remote/${guildId}`)
-          ]
-        },
-        config.selfDestroyMessageLifeSpan
+      const player = createPlayer(
+        manager,
+        <TextChannel>textChannel,
+        <VoiceChannel>voiceChannel
       )
-      // const d = await database
-      //   ?.collection("remote")
-      //   .where("sessionId", "==", sessionID)
-      //   .where("guildId", "==", guildId)
-      //   .get()
-      //
-      // if (d && d.size > 0) {
-      //   const doc = d.docs[0]
-      //   if (doc) {
-      //     textChannel.send({
-      //       embeds: [
-      //         commandResponseEmbed(`https://whaly.pryter.me/remote/${guildId}`)
-      //       ]
-      //     })
-      //   }
-      // } else {
-      //   const ref = await database?.collection("remote")?.add({
-      //     sessionId: sessionID,
-      //     guid: guildId
-      //   })
-      //   if (ref) {
-      //     textChannel.send({
-      //       embeds: [commandResponseEmbed(`http://localhost:3000/id/${ref.id}`)]
-      //     })
-      //   }
-      // }
+
+      if (player.state !== "CONNECTED") {
+        player.connect()
+      }
+
+      await interaction.reply({
+        embeds: [
+          commandResponseEmbed(
+            "Summoned the bot! Play something before it leaves."
+          )
+        ],
+        components: [
+          newControllerButtonStrip(
+            player.guild
+          ) as ActionRowBuilder<ButtonBuilder>
+        ],
+        fetchReply: true
+      })
+
+      setTimeout(
+        async () => {
+          if (player.state === "DESTROYING") {
+            return
+          }
+
+          if (!player.playing && player.state !== "DISCONNECTED") {
+            await sendSelfDestroyMessage(
+              textChannel,
+              { embeds: [disconnectEmbed(inactivityDisconnectReason)] },
+              config.selfDestroyMessageLifeSpan
+            )
+            player.destroy()
+          }
+        },
+        config.reconnectEmbedLifeSpan > config.disconnectTime
+          ? config.reconnectEmbedLifeSpan + config.disconnectTime
+          : config.disconnectTime
+      )
+      return null
     }
   }
 }

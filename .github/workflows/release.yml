@@ -23,11 +23,17 @@ jobs:
       - name: Install Dependencies
         run: bun install
 
-      - name: Build Bun Runtime
-        run: bun build ./src/runtime --target=node --outdir=./out
+      # Run your build script (this should produce dist/)
+      - name: Build Project
+        run: bun run build
 
+      # Copy package.json into dist before zipping (if runtime needs it)
+      - name: Copy package.json
+        run: cp package.json dist/
+
+      # Zip the dist folder, naming it after the release tag
       - name: Zip runtime output
-        run: zip -r "${{ github.event.release.tag_name }}-whaly.zip" out
+        run: zip -r "${{ github.event.release.tag_name }}-whaly.zip" dist
 
       - name: Upload Release Asset
         uses: softprops/action-gh-release@v2

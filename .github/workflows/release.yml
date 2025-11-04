@@ -1,0 +1,37 @@
+name: Build Bun Runtime
+
+on:
+  release:
+    types: [published]   # runs when a release is created/published
+
+permissions:
+  contents: write   # REQUIRED to upload release assets
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: "latest"
+
+      - name: Install Dependencies
+        run: bun install
+
+      - name: Build Bun Runtime
+        run: bun build ./src/runtime --target=bun --outdir=./out
+
+      - name: Zip runtime output
+        run: zip -r "${{ github.event.release.tag_name }}-runtime.zip" out
+
+      - name: Upload Release Asset
+        uses: softprops/action-gh-release@v2
+        with:
+          files: "${{ github.event.release.tag_name }}-runtime.zip"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

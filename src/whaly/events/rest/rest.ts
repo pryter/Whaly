@@ -53,12 +53,10 @@ export const startRest = (manager: Manager, pBus: Bus<Player>) => {
     client.send(JSON.stringify(data))
   })
 
-  server.listen(3001, () => console.log("Proxy listening on :3001"))
-
   app.use(express.json())
 
   handleEndpoints(app, manager, pBus)
   // Start server
   const PORT = 3223
-  app.listen(PORT, () => console.log(`REST Service on ${PORT}`))
+  server.listen(PORT, () => console.log(`Proxy listening on :${PORT}`))
 }

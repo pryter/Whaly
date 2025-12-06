@@ -2,6 +2,7 @@ import * as http from "node:http"
 
 import type { Bus } from "@main/events/eventbus"
 import { handleEndpoints } from "@main/events/rest/endpoints"
+import cors from "cors"
 import type { Manager, Player } from "erela.js"
 import express from "express"
 import { WebSocketServer } from "ws"
@@ -52,6 +53,12 @@ export const startRest = (manager: Manager, pBus: Bus<Player>) => {
     }
     client.send(JSON.stringify(data))
   })
+
+  app.use(
+    cors({
+      origin: ["https://whaly-panel.netlify.app", "https://whaly.pryter.me"]
+    })
+  )
 
   app.use(express.json())
 
